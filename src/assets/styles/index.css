@@ -1,0 +1,88 @@
+:root {
+  --color: #fff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #9d3333;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #f8f8f8;
+}
+.image {
+  max-width: 100%;
+  display: block;
+}
+
+.loader {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: #c63f35;
+  color: #e6e6e6;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 3px;
+}
+
+.grid-father {
+  display: grid;
+  grid-template-columns: 20px 1fr 20px;
+}
+
+.grid-son {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+@media screen and (min-width: 420px) and (max-width: 768px) {
+  .grid-father {
+    display: grid;
+    grid-template-columns: 60px 1fr 60px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .grid-father {
+    display: grid;
+    grid-template-columns: 100px 1fr 100px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .grid-father {
+    display: grid;
+    grid-template-columns: 130px 1fr 130px;
+  }
+}
+
+@media screen and (min-width: 1440px) and (max-width: 2560px) {
+  .grid-father {
+    display: grid;
+    grid-template-columns: 160px 1fr 160px;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .grid-father {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+  }
+}

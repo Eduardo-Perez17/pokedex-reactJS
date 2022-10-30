@@ -1,0 +1,98 @@
+.header {
+  background-image: linear-gradient(to right top, #ff7c37, #ff8a32, #ff972e, #ffa52b, #ffb22a, #ffbb28, #fec426, #fccd26, #f9d422, #f5db1f, #f0e31e, #ebea1f);
+  height: 100%;
+}
+
+.burble {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.3;
+  position: absolute;
+  bottom: -150;
+  left: 5%;
+
+  animation: burbles 3s linear infinite;
+}
+
+.burble:nth-child(1) {
+  width: 80px;
+  height: 80px;
+  left: 5%;
+  animation-duration: 3s;
+}
+
+.burble:nth-child(2) {
+  width: 100px;
+  height: 100px;
+  left: 35%;
+  animation-duration: 2.9s;
+}
+
+.burble:nth-child(3) {
+  width: 50px;
+  height: 50px;
+  left: 60%;
+  animation-duration: 5s;
+}
+
+.burble:nth-child(4) {
+  width: 20px;
+  height: 20px;
+  left: 60%;
+  animation-duration: 4s;
+}
+
+.burble:nth-child(5) {
+  width: 80px;
+  height: 80px;
+  left: 50%;
+  animation-duration: 6s;
+}
+
+@keyframes burbles {
+  0% {
+    bottom: 0;
+    opacity: 0;
+  }
+  30% {
+    transform: translateX(30px);
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    bottom: 100vh;
+    opacity: 0;
+  }
+}
+
+.header-son {
+  margin: 30px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.header__logo {
+  width: 100px;
+}
+
+.header__icon {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.header__icon--item {
+  padding: 0 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  .burble:nth-child(6) {
+    width: 130px;
+    height: 130px;
+    left: 85%;
+    animation-duration: 3s;
+  }
+}

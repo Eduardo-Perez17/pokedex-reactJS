@@ -1,0 +1,148 @@
+.header__pokemon--type {
+  margin: 10px 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.main_style_type {
+  margin-right: 10px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.main_style_type:nth-child(2) {
+  margin: 0px 5px;
+}
+
+.header__type--pokemon-item {
+  font-size: 12px;
+}
+
+.icon__type--pokemon {
+  padding: 0 5px;
+  width: 20px;
+}
+
+.pokemon__header--img {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.pokemon__header--img-item {
+  margin-top: 15px;
+  width: 250px;
+  max-width: 100%;
+  transition: transform 0.3s ease-out;
+}
+
+.pokemon__header--img-item:hover {
+  transform: scale(1.1);
+}
+
+.bug {
+  background-color: #7bcf00;
+}
+
+.grass {
+  background-color: #1cd80e;
+}
+
+.poison {
+  background-color: #f149ff;
+}
+
+.fire {
+  background-color: #ff9900;
+  padding: 0;
+}
+
+.flying {
+  background-color: #89bdff;
+}
+
+.water {
+  background-color: #14a8ff;
+}
+
+.rock {
+  background-color: #d8bc5a;
+}
+
+.normal {
+  background-color: #9fa39d;
+}
+
+.dark,
+.shadow {
+  background-color: #5a566a;
+}
+
+.dragon {
+  background-color: #0076ff;
+}
+
+.unknown {
+  background-color: #ffffff;
+  color: #000;
+}
+
+.fairy {
+  background-color: #ff76ff;
+}
+
+.electric {
+  background-color: #ffde00;
+}
+
+.fighting {
+  background-color: #ff215b;
+}
+
+.ghost {
+  background-color: #4e6aff;
+}
+
+.ground {
+  background-color: #ff6b0d;
+}
+
+.ice {
+  background-color: #2ee4c6;
+}
+
+.ghost {
+  background-color: #4e6aff;
+}
+
+.psychic {
+  background-color: #ff6c64;
+}
+
+.rock {
+  background-color: #d8bc5a;
+}
+
+.steel {
+  background-color: #23a1bd;
+}
+
+@media screen and (min-width: 500px) and (max-width: 1024px) {
+  .header__pokemon--type {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pokemon__header--img {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
+}
