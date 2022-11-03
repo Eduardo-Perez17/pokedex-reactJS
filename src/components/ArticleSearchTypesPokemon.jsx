@@ -6,6 +6,8 @@ import { Block } from './Block';
 import { ContainerParagraph } from './ContainerParagraph';
 
 export const ArticleSearchTypesPokemon = () => {
+  // ! COLOCAR ICONOS DE LOS TYPES
+
   const [typesPokemonData, setTypesPokemonData] = useState();
 
   const resolveDataAPI = async () => {
@@ -17,7 +19,7 @@ export const ArticleSearchTypesPokemon = () => {
 
   useEffect(() => {
     resolveDataAPI();
-  }, []);
+  });
 
   return (
     <>

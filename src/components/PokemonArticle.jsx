@@ -20,7 +20,7 @@ export const PokemonArticle = ({ pokemonData }) => {
 
   return (
     <>
-      {pokemonData ? (
+      {pokemonData && (
         <Block designBlock={`card__pokemon ${pokemonTypeIcon}_background`}>
           <Block designBlock='card__pokemon--main-img'>
             <Image
@@ -53,7 +53,7 @@ export const PokemonArticle = ({ pokemonData }) => {
             </Block>
           </Block>
         </Block>
-      ) : null}
+      )}
     </>
   );
 };

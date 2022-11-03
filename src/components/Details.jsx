@@ -15,7 +15,7 @@ export const Details = ({ stateModal, validationModal }) => {
         iconButtonInfo={info}
         iconButtonStyle='icon__button--header info__icon--btn'
       />
-      {stateModal ? <ModalPokemon /> : null}
+      {stateModal && <ModalPokemon />}
     </Block>
   );
 };

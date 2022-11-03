@@ -78,6 +78,10 @@
   }
 }
 
+.pokemon-article {
+  margin: 60px 0;
+}
+
 .button__input--search-article {
   padding: 8px;
 }

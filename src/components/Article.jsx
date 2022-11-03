@@ -12,15 +12,15 @@ import { Title } from './Title';
 import '../assets/styles/article.css';
 
 // ! HACER EL 404 NOT FOUND
-
 // ! FILTER ANTES DE HACER EL LLAMADO A TODOS LOS POKEMONES
+// ! TERMINAR EL BOTON DE HOME
 
 export const Article = () => {
   const [pokemonSearch, setPokemonSearch] = useState();
 
   return (
     <Block designBlock='article-main'>
-      <Button typeButton='button' text='home' btnEvent />
+      <Button typeButton='button' text='home' />
       <Title title='Search for types' />
       <Block designBlock='search__article'>
         <Block>
