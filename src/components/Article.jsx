@@ -12,8 +12,8 @@ import { Title } from './Title';
 import '../assets/styles/article.css';
 
 // ! HACER EL 404 NOT FOUND
-// ! FILTER ANTES DE HACER EL LLAMADO A TODOS LOS POKEMONES
 // ! TERMINAR EL BOTON DE HOME
+// ! FILTER ANTES DE HACER EL LLAMADO A TODOS LOS POKEMONES
 
 export const Article = () => {
   const [pokemonSearch, setPokemonSearch] = useState();

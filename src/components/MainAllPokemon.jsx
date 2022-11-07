@@ -9,13 +9,13 @@ export const MainAllPokemon = () => {
   const [pokemon, setPokemon] = useState();
   const [page, setPage] = useState(0);
 
-  const callAllPokemon = async () => {
+  const callAllPokemonAPI = async () => {
     const allPokemon = await resolveDataPokemons(12, 12 * page);
     setPokemon(allPokemon);
   };
 
   useEffect(() => {
-    callAllPokemon();
+    callAllPokemonAPI();
   }, [page]);
 
   return (

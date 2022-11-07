@@ -1,5 +1,4 @@
-import { useState, useEffect } from 'react';
-import { icons } from '../utils/constants/contant';
+import useTypeIcon from '../context/useTypeIcon';
 import { iconsCard } from '../utils/constants/contant';
 
 import { Block } from './Block';
@@ -11,12 +10,7 @@ import { PokemonType } from './pokemon/PokemonType';
 import '../assets/styles/pokemonArticle.css';
 
 export const PokemonArticle = ({ pokemonData }) => {
-  const [pokemonTypeIcon, setPokemonTypeIcon] = useState();
-  const [typeIcon, setTypeIcon] = useState();
-
-  useEffect(() => {
-    setTypeIcon(icons[pokemonTypeIcon]);
-  });
+  const [setPokemonTypeIcon, typeIcon, pokemonTypeIcon] = useTypeIcon();
 
   return (
     <>
@@ -38,18 +32,18 @@ export const PokemonArticle = ({ pokemonData }) => {
           </Block>
           <Block designBlock='card__pokemon--info-secundary'>
             <Block designBlock='card__pokemon--info-secundary-item'>
+              <ContainerParagraph paragraph='weight' />
               <Block designBlock='card__pokemon--info-weight'>
                 <Image image={iconsCard.weight} alternativeText={iconsCard.weight} />
                 <ContainerParagraph paragraph={`${pokemonData.weight} kg`} />
               </Block>
-              <ContainerParagraph paragraph='weight' />
             </Block>
             <Block designBlock='card__pokemon--info-secundary-item'>
+              <ContainerParagraph paragraph='height' />
               <Block designBlock='card__pokemon--info-heigth'>
                 <Image image={iconsCard.height} alternativeText={iconsCard.height} />
                 <ContainerParagraph paragraph={pokemonData.height < 10 ? `0.${pokemonData.height} m` : `${pokemonData.height} m`} />
               </Block>
-              <ContainerParagraph paragraph='height' />
             </Block>
           </Block>
         </Block>

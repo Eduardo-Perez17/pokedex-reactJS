@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import { icons } from '../utils/constants/contant';
+import { useState } from 'react';
+import useTypeIcon from '../context/useTypeIcon';
 import '../assets/styles/headerArticle.css';
 
 import { Block } from './Block';
@@ -13,15 +13,10 @@ import { PokemonImage } from './pokemon/PokemonImage';
 import { PokemonTypeDecoration } from './PokemonTypeDecoration';
 
 export const Pokemon = ({ data, ability }) => {
-  const [pokemonTypeIcon, setPokemonTypeIcon] = useState();
-  const [typeIcon, setTypeIcon] = useState();
   const [modalPokemon, setModalPokemon] = useState(false);
+  const [setPokemonTypeIcon, typeIcon] = useTypeIcon();
 
   const handleModal = () => setModalPokemon(!modalPokemon);
-
-  useEffect(() => {
-    setTypeIcon(icons[pokemonTypeIcon]);
-  });
 
   return (
     <Block designBlock='header__article--pokemon'>

@@ -27,11 +27,15 @@
 
 .card__pokemon--info-major p {
   font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.card__pokemon--info-secundary-item p:nth-child(1) {
+  margin-bottom: 0px;
 }
 
 .card__pokemon--info-weight,
 .card__pokemon--info-heigth {
-  margin-bottom: -10px;
   display: flex;
   align-items: center;
   justify-content: center;
