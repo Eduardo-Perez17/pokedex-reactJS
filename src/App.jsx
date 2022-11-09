@@ -1,6 +1,8 @@
 import { Header } from './components/Header';
 import { HeaderArticle } from './components/HeaderArticle';
 import { Article } from './components/Article';
+import Slider from './components/Slider';
+import Footer from './components/Footer';
 import { Grid } from './components/Grid';
 import { WavesDesign } from './components/WavesDesign';
 
@@ -16,6 +18,10 @@ function App() {
       <WavesDesign />
       <Grid designGrid='article'>
         <Article />
+      </Grid>
+      <Slider />
+      <Grid designGrid='footer'>
+        <Footer />
       </Grid>
     </>
   );

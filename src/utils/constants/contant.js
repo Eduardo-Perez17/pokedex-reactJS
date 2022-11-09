@@ -70,3 +70,11 @@ export const iconsCard = {
   height: height,
   weight: weight,
 };
+
+import left from '../../assets/img/left.png';
+import rigth from '../../assets/img/right.png';
+
+export const iconSlice = {
+  left: left,
+  rigth: rigth,
+};

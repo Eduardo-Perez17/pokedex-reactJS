@@ -1,0 +1,20 @@
+import { Block } from './Block';
+import { ContainerParagraph } from './ContainerParagraph';
+
+import '../assets/styles/footer.css';
+
+const Footer = () => {
+  return (
+    <>
+      <hr />
+      <Block>
+        <ContainerParagraph paragraph='Developer information' />
+      </Block>
+      <Block designBlock='footer-item'>
+        <ContainerParagraph paragraph='Image rights to Nintendo and The Pokémon Company Data taken from API - pokeapi.co' />
+      </Block>
+    </>
+  );
+};
+
+export default Footer;

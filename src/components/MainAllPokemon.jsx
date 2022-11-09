@@ -21,7 +21,7 @@ export const MainAllPokemon = () => {
   return (
     <>
       <PagePagination functionPage={setPage} page={page} />
-      {pokemon && (
+      {pokemon ? (
         <Block designBlock='all__pokemon--article'>
           {pokemon.map(e => (
             <div key={e.id}>
@@ -29,6 +29,8 @@ export const MainAllPokemon = () => {
             </div>
           ))}
         </Block>
+      ) : (
+        <p>cargando....</p>
       )}
       <PagePagination functionPage={setPage} page={page} />
     </>

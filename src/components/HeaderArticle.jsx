@@ -38,6 +38,7 @@ export const HeaderArticle = () => {
         <>
           <Pokemon data={pokemonRandom} ability={pokemonRandomAbility} />
           <Button
+            typeButton='button'
             btnEvent={resolveDataAPI}
             text='refresh'
             designButton='button header__details--button btn-refresh'
