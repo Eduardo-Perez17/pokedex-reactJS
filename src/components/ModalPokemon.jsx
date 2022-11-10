@@ -16,7 +16,9 @@ export const ModalPokemon = () => {
         <Block designBlock='container'>
           <Block designBlock='modal'>
             <h1>Hola mundo!</h1>
+            {/* // todo la prop "btnEvent" no me dice nada sobre lo que hace. Es un onClick? onFocus? onQue ? */}
             <Button typeButton='button' text='close' btnEvent={handleModal} designButton='button header__details--button' />
+            {/* // todo tienes un componente para renderizar un p */}
             <p>
               Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un
               impresor (N. del T. persona

@@ -1,6 +1,9 @@
 import '../assets/styles/waves.css';
 
 export const WavesDesign = () => {
+  // todo tienes un componente para los div
+  // todo si usas un div sin contenido cierra de una <div /> queda mas limpio
+  
   return (
     <>
       <div className='wave-main'>

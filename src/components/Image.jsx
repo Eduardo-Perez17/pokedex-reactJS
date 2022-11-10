@@ -1,3 +1,4 @@
+// todo destructura
 export const Image = props => {
   return (
     <img

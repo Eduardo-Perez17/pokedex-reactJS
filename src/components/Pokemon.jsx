@@ -16,6 +16,8 @@ export const Pokemon = ({ data, ability }) => {
   const [modalPokemon, setModalPokemon] = useState(false);
   const [setPokemonTypeIcon, typeIcon] = useTypeIcon();
 
+  // todo usar el setState de esta manera para este caso esta mal, lo dice la propio documentacion
+  // todo https://es.reactjs.org/docs/hooks-reference.html#functional-updates
   const handleModal = () => setModalPokemon(!modalPokemon);
 
   return (

@@ -25,8 +25,10 @@ const PokemonSlider = ({ pokemon }) => {
         <ContainerParagraph paragraph={`Especie ${pokemon.species.name}`} />
       </Block>
       <Block designBlock='main__pokemon--img'>
+        {/* // todo la prop "btnEvent" no me dice nada sobre lo que hace. Es un onClick? onFocus? onQue ? */}
         <Button typeButton='button' btnEvent={handleImageRotateRight} designButton='button__slice--img button' iconButton={iconSlice.left} iconButtonStyle='icon__button--slider' />
         <Image image={imagePokemon} alternativeText={imagePokemon} designImage='pokemon__slider--img' />
+        {/* // todo la prop "btnEvent" no me dice nada sobre lo que hace. Es un onClick? onFocus? onQue ? */}
         <Button typeButton='button' btnEvent={handleImageRotateLeft} designButton='button__slice--img button' iconButton={iconSlice.rigth} iconButtonStyle='icon__button--slider' />
       </Block>
     </Block>

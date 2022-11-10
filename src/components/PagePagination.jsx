@@ -16,6 +16,7 @@ export const PagePagination = ({ page, functionPage }) => {
 
   return (
     <Block designBlock='main__button--page'>
+      {/* // todo la prop "btnEvent" no me dice nada sobre lo que hace. Es un onClick? onFocus? onQue ? */}
       <Button
         typeButton='button'
         text='previous'
@@ -26,6 +27,7 @@ export const PagePagination = ({ page, functionPage }) => {
         iconButtonStyle='icon__button--left icon__button--page'
       />
 
+      {/* // todo la prop "btnEvent" no me dice nada sobre lo que hace. Es un onClick? onFocus? onQue ? */}
       <Button
         typeButton='button'
         text='next'
