@@ -1,5 +1,5 @@
 import useTypeIcon from '../context/useTypeIcon';
-import { iconsCard } from '../utils/constants/contant';
+import { iconsCard } from '../utils/constants/constants';
 
 import { Block } from './Block';
 import { Image } from './Image';

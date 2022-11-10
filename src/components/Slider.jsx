@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { resolveDataPokemons } from '../services/callAllPokemon';
-import PokemonSlider from './PokemonSlider';
 import '../assets/styles/slice.css';
+
+import PokemonSlider from './PokemonSlider';
 import { Block } from './Block';
-import { iconSlice } from '../utils/constants/contant';
 
 const Slider = () => {
   // todo "setall" la "a" va en mayuscula

@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from 'react';
-
 export const background = {
   fire: '#ffbd8d',
   grass: '#68a160',

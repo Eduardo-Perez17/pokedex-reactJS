@@ -21,10 +21,12 @@ export const Article = () => {
   return (
     <Block designBlock='article-main'>
       {/* // todo un boton sin evento no es un boton */}
+      {/* // ! el boton no tiene evento porque no lo he terminado de programar */}
       <Button typeButton='button' text='home' />
       <Title title='Search for types' />
       <Block designBlock='search__article'>
         {/* // todo porque usas un div sin clase ? no tiene sentido */}
+        {/* // ?¿en estos casos tengo que usar una etiqueta div y no un componente? */}
         <Block>
           <ArticleSearchTypesPokemon />
         </Block>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from './Button';
 import { Block } from './Block';
-import { iconSlice } from '../utils/constants/contant';
+import { iconSlice } from '../utils/constants/constants';
 
 export const PagePagination = ({ page, functionPage }) => {
   const handleNext = () => {

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { icons } from '../utils/constants/contant';
+import { icons } from '../utils/constants/constants';
 
 const useTypeIcon = () => {
   const [pokemonTypeIcon, setPokemonTypeIcon] = useState();

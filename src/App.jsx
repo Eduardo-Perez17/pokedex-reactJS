@@ -9,9 +9,11 @@ import { WavesDesign } from './components/WavesDesign';
 import './assets/styles/index.css';
 
 // todo descarga la extension Better Comments para que tengas mis comentarios en color
+// * listo
 // todo Busca en la lupa // todo para que te salga todos los comentarios que deje y los veas 1 a 1
-
+// * Listo
 // todo lo dejo aqui general porque si no te lleno el codigo de comentarios
+
 // todo valida dentro de los componentes que te llega la info
 // todo en caso de que no llegue la info muestra algo por default
 // todo pero estas asomiendo que siempre te llega la data y eso esta mal
@@ -19,7 +21,7 @@ import './assets/styles/index.css';
 
 // todo maneja los errores
 
-// todo usa loader mientras se hacen las peticiones 
+// todo usa loader mientras se hacen las peticiones
 
 function App() {
   return (

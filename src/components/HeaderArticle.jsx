@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { dataPokemon, getData } from '../services/callAllPokemon';
+import { dataPokemon, getData, selectRandomData } from '../services/callAllPokemon';
 
 // todo esta funcion no deberia de estar dentro del folder de constantes
-import { selectRandomData } from '../utils/constants/ramdonData';
 
 import HeaderArticleLoader from '../components/loaders/HeaderArticleLoader';
 

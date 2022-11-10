@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { iconSlice } from '../utils/constants/contant';
+import { iconSlice } from '../utils/constants/constants';
 
 import { Block } from './Block';
 import { Title } from './Title';

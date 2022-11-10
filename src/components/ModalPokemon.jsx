@@ -5,6 +5,8 @@ import '../assets/styles/modal.css';
 import { Block } from './Block';
 import { Button } from '../components/Button';
 
+// ! ESTE COMPONENTE ESTA IMCOMPLENTO POR LO TANTO NO USE OTROS COMPONENTES Y TENGO PROBLEMAS DE ESTAD
+
 export const ModalPokemon = () => {
   const [modalPokemon, setModalPokemon] = React.useState(true);
 

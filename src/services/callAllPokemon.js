@@ -3,6 +3,7 @@ export const getData = async url => {
   return fetch(url)
     .then(res => res.json())
     .then(data => {
+      // console.log(data);
       return data;
     })
     .catch(err => console.log(err));
@@ -12,6 +13,11 @@ export const getData = async url => {
 export const dataPokemon = async urlPokemon => {
   const data = await getData(urlPokemon);
   return data;
+};
+
+// * RETORNA UN DATO ALEATORIO DE LA API
+export const selectRandomData = data => {
+  return data[Math.floor(Math.random() * data.length)];
 };
 
 // * SISTEMA DE PAGINADO Y LLAMADO A DATOS DE UNA API
