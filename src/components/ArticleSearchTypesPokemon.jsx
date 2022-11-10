@@ -15,7 +15,7 @@ export const ArticleSearchTypesPokemon = () => {
   // todo este useEffect se esta ejecutando de manera infinita y no te diste cuenta porque seguro no miraste el network y eso esta mal
   useEffect(() => {
     resolveDataAPI();
-  }, []);
+  });
 
   return (
     <>
