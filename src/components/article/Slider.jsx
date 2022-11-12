@@ -8,7 +8,6 @@ import { Block } from '../Block';
 
 import '../../assets/styles/slice.css';
 
-// todo asi no se valida un array un objeto vacio entra en esta validacion */
 export const Slider = () => {
   const [allPokemonSlider, setAllPokemonSlider] = useState();
   const [error, setError] = useState(false);

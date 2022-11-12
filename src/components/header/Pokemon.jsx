@@ -18,10 +18,7 @@ import '../../assets/styles/headerArticle.css';
 // todo https://es.reactjs.org/docs/hooks-reference.html#functional-updates
 // ? lei la docuentacion, no encontre bien. Explica el porque esta mal para este caso
 export const Pokemon = ({ data, ability, error }) => {
-  const [modalPokemon, setModalPokemon] = useState(false);
   const [setPokemonTypeIcon, typeIcon] = useTypeIcon();
-
-  const handleModal = () => setModalPokemon(!modalPokemon);
 
   return (
     <>
@@ -34,7 +31,7 @@ export const Pokemon = ({ data, ability, error }) => {
             <PokemonType type={data.types} icon={typeIcon} pokemonTypeIcon={setPokemonTypeIcon} />
             <PokemonName name={data.name} />
             <PokemonAbility ability={ability} />
-            <Details stateModal={modalPokemon} validationModal={handleModal} />
+            <Details />
           </Block>
           <PokemonTypeDecoration typeIcon={typeIcon} />
           <Block designBlock='pokemon__header--img'>

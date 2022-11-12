@@ -4,7 +4,6 @@ import { dataPokemon } from '../../services/callAllPokemon';
 import { PokemonTypeMainMap } from './PokemonTypeMainMap';
 import { Block } from '../Block';
 
-// todo asi no se valida un array, un objecto vacio pasa esta validacion */
 export const ArticleSearchTypesPokemon = () => {
   const [typesPokemonData, setTypesPokemonData] = useState();
 
@@ -20,7 +19,7 @@ export const ArticleSearchTypesPokemon = () => {
 
   return (
     <>
-      {typesPokemonData && (
+      {typesPokemonData ? (
         <Block designBlock='search__type--main'>
           {typesPokemonData.results.map(nameType => (
             <React.Fragment key={nameType.name}>
@@ -28,7 +27,7 @@ export const ArticleSearchTypesPokemon = () => {
             </React.Fragment>
           ))}
         </Block>
-      )}
+      ) : null}
     </>
   );
 };
