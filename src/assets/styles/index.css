@@ -52,6 +52,21 @@ body::-webkit-scrollbar-track {
   grid-column-end: 3;
 }
 
+.main__error--notification {
+  position: fixed;
+  left: 0;
+  top: -150px;
+  right: 0;
+  background-color: #9d3333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  transform: translateY(150px);
+  transition: transform 0.5s;
+}
+
 @media screen and (min-width: 420px) and (max-width: 768px) {
   .grid-father {
     display: grid;

@@ -1,10 +1,3 @@
-// todo destructura
-export const Image = props => {
-  return (
-    <img
-      src={props.image}
-      alt={props.alternativeText}
-      className={props.designImage}
-    />
-  );
+export const Image = ({ image, alternativeText, designImage }) => {
+  return <img src={image} alt={alternativeText} className={designImage} />;
 };

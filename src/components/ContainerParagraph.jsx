@@ -1,3 +1,3 @@
-export const ContainerParagraph = props => {
-  return <p className={props.designContainerParagraph}>{props.paragraph}</p>;
+export const ContainerParagraph = ({ designContainerParagraph, paragraph }) => {
+  return <p className={designContainerParagraph}>{paragraph}</p>;
 };

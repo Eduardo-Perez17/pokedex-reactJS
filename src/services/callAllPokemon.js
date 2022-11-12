@@ -1,12 +1,8 @@
 // * RETORNAR UNA PROMESA DE LA URL QUE SE INTRODUZCA EN EL PARAMETRO DE LA FUNCION
 export const getData = async url => {
-  return fetch(url)
-    .then(res => res.json())
-    .then(data => {
-      // console.log(data);
-      return data;
-    })
-    .catch(err => console.log(err));
+  const fechtData = await fetch(url);
+  const responseData = await fechtData.json();
+  return responseData;
 };
 
 // * RETORNA EL RESULTADO DE LA PROMESA QUE SE INTRODUZCA EN EL PARAMETRO DE LA FUNCION

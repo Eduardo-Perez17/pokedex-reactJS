@@ -1,11 +1,7 @@
 .modal {
-  width: 450px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   position: fixed;
-  top: 20%;
-  left: 30%;
+  top: 0;
+  left: 0;
+  align-items: center;
   background-color: #fff;
 }

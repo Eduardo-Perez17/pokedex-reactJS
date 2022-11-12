@@ -1,5 +1,9 @@
 import { Title } from '../Title';
 
 export const PokemonName = ({ name }) => {
-  return <Title designTitle='pokemon__name--header' title={name} />;
+  return (
+    <Title>
+      <h2>{name}</h2>
+    </Title>
+  );
 };

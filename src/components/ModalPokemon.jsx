@@ -1,34 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import '../assets/styles/modal.css';
 
 import { Block } from './Block';
 import { Button } from '../components/Button';
 
-// ! ESTE COMPONENTE ESTA IMCOMPLENTO POR LO TANTO NO USE OTROS COMPONENTES Y TENGO PROBLEMAS DE ESTAD
+import '../assets/styles/modal.css';
+
+// ! ESTE COMPONENTE ESTA IMCOMPLENTO POR LO TANTO NO USE OTROS COMPONENTES Y TENGO PROBLEMAS DE ESTADO
 
 export const ModalPokemon = () => {
-  const [modalPokemon, setModalPokemon] = React.useState(true);
-
-  const handleModal = () => setModalPokemon(false);
-
   return ReactDOM.createPortal(
-    <>
-      {modalPokemon ? (
-        <Block designBlock='container'>
-          <Block designBlock='modal'>
-            <h1>Hola mundo!</h1>
-            {/* // todo la prop "btnEvent" no me dice nada sobre lo que hace. Es un onClick? onFocus? onQue ? */}
-            <Button typeButton='button' text='close' btnEvent={handleModal} designButton='button header__details--button' />
-            {/* // todo tienes un componente para renderizar un p */}
-            <p>
-              Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un
-              impresor (N. del T. persona
-            </p>
-          </Block>
-        </Block>
-      ) : null}
-    </>,
+    <Block designBlock='modal'>
+      <h1>Esto es un modal</h1>
+      <p>no esta terminado</p>
+      <Button typeButton='button' designButton='button header__details--button'>
+        close
+      </Button>
+    </Block>,
     document.getElementById('modal')
   );
 };

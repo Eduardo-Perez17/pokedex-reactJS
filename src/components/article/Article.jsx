@@ -1,17 +1,15 @@
 import { useState } from 'react';
 
 import { ArticleSearchTypesPokemon } from './ArticleSearchTypesPokemon';
+import { ContainerParagraph } from '../ContainerParagraph';
+import { PokemonArticle } from '../article/PokemonArticle';
+import { MainAllPokemon } from '../article/MainAllPokemon';
 import { ArticleSearchForm } from './ArticleSearchForm';
-import { ContainerParagraph } from './ContainerParagraph';
-import { PokemonArticle } from './PokemonArticle';
-import { MainAllPokemon } from './MainAllPokemon';
-import { Button } from './Button';
-import { Block } from './Block';
-import { Title } from './Title';
+import { Block } from '../Block';
+import { Title } from '../Title';
 
-import '../assets/styles/article.css';
+import '../../assets/styles/article.css';
 
-// ! HACER EL 404 NOT FOUND
 // ! TERMINAR EL BOTON DE HOME
 // ! FILTER ANTES DE HACER EL LLAMADO A TODOS LOS POKEMONES
 
@@ -20,16 +18,11 @@ export const Article = () => {
 
   return (
     <Block designBlock='article-main'>
-      {/* // todo un boton sin evento no es un boton */}
-      {/* // ! el boton no tiene evento porque no lo he terminado de programar */}
-      <Button typeButton='button' text='home' />
-      <Title title='Search for types' />
+      <Title>
+        <h2>Search for types</h2>
+      </Title>
       <Block designBlock='search__article'>
-        {/* // todo porque usas un div sin clase ? no tiene sentido */}
-        {/* // ?¿en estos casos tengo que usar una etiqueta div y no un componente? */}
-        <Block>
-          <ArticleSearchTypesPokemon />
-        </Block>
+        <ArticleSearchTypesPokemon />
         <Block designBlock='form__serch'>
           <ContainerParagraph designContainerParagraph='type__writer' paragraph='search for id or name' />
           <ArticleSearchForm setPokemonValue={setPokemonSearch} />

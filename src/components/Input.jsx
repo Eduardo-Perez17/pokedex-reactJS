@@ -1,3 +1,3 @@
-export const Input = props => {
-  return <input type={props.typeInput} className={props.designInput} value={props.valueInput} onChange={props.eventInput} />;
+export const Input = ({ typeInput, designInput, valueInput, onChange }) => {
+  return <input type={typeInput} className={designInput} value={valueInput} onChange={onChange} />;
 };

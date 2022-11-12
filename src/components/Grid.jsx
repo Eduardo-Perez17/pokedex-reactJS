@@ -1,11 +1,11 @@
 import { Block } from './Block';
 
-export const Grid = props => {
+export const Grid = ({ designGrid, children }) => {
   return (
-    <div className={props.designGrid}>
+    <Block designBlock={designGrid}>
       <Block designBlock='grid-father'>
-        <Block designBlock='grid-son'>{props.children}</Block>
+        <Block designBlock='grid-son'>{children}</Block>
       </Block>
-    </div>
+    </Block>
   );
 };

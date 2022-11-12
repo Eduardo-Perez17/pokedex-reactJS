@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import { iconSlice } from '../utils/constants/constants';
+import { iconSlice } from '../../utils/constants/constant';
 
-import { Block } from './Block';
-import { Title } from './Title';
-import { ContainerParagraph } from './ContainerParagraph';
-import { Image } from './Image';
-import { Button } from './Button';
+import { Block } from '../Block';
+import { Title } from '../Title';
+import { ContainerParagraph } from '../ContainerParagraph';
+import { Image } from '../Image';
+import { Button } from '../Button';
 
-const PokemonSlider = ({ pokemon }) => {
+export const PokemonSlider = ({ pokemon }) => {
   const imageFront = pokemon.sprites.versions['generation-v']['black-white'].animated['front_default'];
   const imageBack = pokemon.sprites.versions['generation-v']['black-white'].animated['back_default'];
 
@@ -25,14 +25,16 @@ const PokemonSlider = ({ pokemon }) => {
         <ContainerParagraph paragraph={`Especie ${pokemon.species.name}`} />
       </Block>
       <Block designBlock='main__pokemon--img'>
-        {/* // todo la prop "btnEvent" no me dice nada sobre lo que hace. Es un onClick? onFocus? onQue ? */}
-        <Button typeButton='button' btnEvent={handleImageRotateRight} designButton='button__slice--img button' iconButton={iconSlice.left} iconButtonStyle='icon__button--slider' />
+        <Button typeButton='button' onClick={handleImageRotateRight} designButton='button__slice--img button'>
+          <Image image={iconSlice.left} alternativeText={iconSlice.left} designImage='icon__button--slider' />
+        </Button>
+
         <Image image={imagePokemon} alternativeText={imagePokemon} designImage='pokemon__slider--img' />
-        {/* // todo la prop "btnEvent" no me dice nada sobre lo que hace. Es un onClick? onFocus? onQue ? */}
-        <Button typeButton='button' btnEvent={handleImageRotateLeft} designButton='button__slice--img button' iconButton={iconSlice.rigth} iconButtonStyle='icon__button--slider' />
+
+        <Button typeButton='button' onClick={handleImageRotateLeft} designButton='button__slice--img button'>
+          <Image image={iconSlice.rigth} alternativeText={iconSlice.rigth} designImage='icon__button--slider' />
+        </Button>
       </Block>
     </Block>
   );
 };
-
-export default PokemonSlider;

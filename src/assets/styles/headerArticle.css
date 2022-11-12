@@ -8,7 +8,6 @@
 }
 
 .header__type--pokemon-item,
-.pokemon__name--header,
 .header__details--button,
 .card__pokemon--info-major {
   text-transform: capitalize;
@@ -27,7 +26,7 @@
 
 .icon__button--header {
   padding: 10px 15px;
-  width: 18px;
+  width: 15px;
 }
 
 .main__decoration--type {
@@ -83,4 +82,18 @@
     width: 1px;
     height: 100px;
   }
+}
+
+.header__error {
+  color: #fff;
+  display: grid;
+  grid-gap: 20px;
+  text-align: center;
+}
+
+.header__error img {
+  max-width: 100%;
+  width: 300px;
+  display: block;
+  margin: auto;
 }

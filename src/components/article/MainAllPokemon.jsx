@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
-import { resolveDataPokemons } from '../services/callAllPokemon';
+import { resolveDataPokemons } from '../../services/callAllPokemon';
 
+import { LoaderHeader } from '../loaders/LoaderHeader';
 import { PagePagination } from './PagePagination';
 import { PokemonArticle } from './PokemonArticle';
-import { Block } from './Block';
+import { Block } from '../Block';
 
 export const MainAllPokemon = () => {
   const [pokemon, setPokemon] = useState();
@@ -30,7 +31,7 @@ export const MainAllPokemon = () => {
           ))}
         </Block>
       ) : (
-        <p>cargando....</p>
+        <LoaderHeader />
       )}
       <PagePagination functionPage={setPage} page={page} />
     </>

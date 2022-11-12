@@ -45,6 +45,10 @@
   transform: scale(1.1);
 }
 
+.header__article--pokemon h2 {
+  text-transform: capitalize;
+}
+
 .bug {
   background-color: #7bcf00;
 }

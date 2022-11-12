@@ -1,13 +1,13 @@
-import useTypeIcon from '../context/useTypeIcon';
-import { iconsCard } from '../utils/constants/constants';
+import useTypeIcon from '../../context/useTypeIcon';
+import { iconsCard } from '../../utils/constants/constant';
 
-import { Block } from './Block';
-import { Image } from './Image';
-import { ContainerParagraph } from './ContainerParagraph';
-import { Title } from './Title';
-import { PokemonType } from './pokemon/PokemonType';
+import { ContainerParagraph } from '../ContainerParagraph';
+import { PokemonType } from '../pokemon/PokemonType';
+import { Block } from '../Block';
+import { Image } from '../Image';
+import { Title } from '../Title';
 
-import '../assets/styles/pokemonArticle.css';
+import '../../assets/styles/pokemonArticle.css';
 
 export const PokemonArticle = ({ pokemonData }) => {
   const [setPokemonTypeIcon, typeIcon, pokemonTypeIcon] = useTypeIcon();
