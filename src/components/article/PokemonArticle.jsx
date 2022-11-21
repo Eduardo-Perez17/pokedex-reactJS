@@ -2,6 +2,7 @@ import useTypeIcon from '../../context/useTypeIcon';
 import { iconsCard } from '../../utils/constants/constant';
 
 import { ContainerParagraph } from '../ContainerParagraph';
+import { PokemonName } from '../pokemon/PokemonName';
 import { PokemonType } from '../pokemon/PokemonType';
 import { Block } from '../Block';
 import { Image } from '../Image';
@@ -10,12 +11,12 @@ import { Title } from '../Title';
 import '../../assets/styles/pokemonArticle.css';
 
 export const PokemonArticle = ({ pokemonData }) => {
-  const [setPokemonTypeIcon, typeIcon, pokemonTypeIcon] = useTypeIcon();
+  const [typeIcon] = useTypeIcon(pokemonData);
 
   return (
     <>
       {pokemonData && (
-        <Block designBlock={`card__pokemon ${pokemonTypeIcon}_background`}>
+        <Block designBlock={`card__pokemon ${typeIcon}_background`}>
           <Block designBlock='card__pokemon--main-img'>
             <Image
               image={pokemonData.sprites.other.home['front_default']}
@@ -25,10 +26,10 @@ export const PokemonArticle = ({ pokemonData }) => {
           </Block>
           <Block designBlock='card__pokemon--info-major'>
             <ContainerParagraph paragraph={pokemonData.id < 10 ? `#0${pokemonData.id}` : `#${pokemonData.id}`} />
-            <Title title={pokemonData.name} />
+            <PokemonName name={pokemonData.name} />
           </Block>
           <Block designBlock='card__pokemon--info-type'>
-            <PokemonType type={pokemonData.types} icon={typeIcon} pokemonTypeIcon={setPokemonTypeIcon} />
+            <PokemonType type={pokemonData.types} icon={typeIcon} />
           </Block>
           <Block designBlock='card__pokemon--info-secundary'>
             <Block designBlock='card__pokemon--info-secundary-item'>

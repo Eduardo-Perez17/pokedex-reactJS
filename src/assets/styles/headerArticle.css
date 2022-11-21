@@ -78,6 +78,10 @@
     align-items: center;
   }
 
+  .main__decoration--type img:nth-child(2) {
+    margin-top: 25px;
+  }
+
   .main__decoration--type::after,
   .main__decoration--type::before {
     content: '';

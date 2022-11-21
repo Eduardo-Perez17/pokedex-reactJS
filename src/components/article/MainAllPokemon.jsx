@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { resolveDataPokemons } from '../../services/callAllPokemon';
 
 import { LoaderHeader } from '../loaders/LoaderHeader';
@@ -25,9 +25,9 @@ export const MainAllPokemon = () => {
       {pokemon ? (
         <Block designBlock='all__pokemon--article'>
           {pokemon.map(e => (
-            <div key={e.id}>
+            <React.Fragment key={e.id}>
               <PokemonArticle pokemonData={e} />
-            </div>
+            </React.Fragment>
           ))}
         </Block>
       ) : (

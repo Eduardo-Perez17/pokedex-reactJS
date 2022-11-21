@@ -3,7 +3,7 @@ import { ContainerParagraph } from './ContainerParagraph';
 
 import '../assets/styles/footer.css';
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <>
       <hr />
@@ -16,5 +16,3 @@ const Footer = () => {
     </>
   );
 };
-
-export default Footer;

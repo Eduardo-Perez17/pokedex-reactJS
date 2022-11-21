@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import useTypeIcon from '../../context/useTypeIcon';
 
 import { PokemonTypeDecoration } from './PokemonTypeDecoration';
@@ -14,11 +14,13 @@ import { PokemonId } from '../pokemon/PokemonId';
 
 import '../../assets/styles/headerArticle.css';
 
-// todo usar el setState de esta manera para este caso esta mal, lo dice la propio documentacion
-// todo https://es.reactjs.org/docs/hooks-reference.html#functional-updates
-// ? lei la docuentacion, no encontre bien. Explica el porque esta mal para este caso
 export const Pokemon = ({ data, ability, error }) => {
-  const [setPokemonTypeIcon, typeIcon] = useTypeIcon();
+  const [typePokemon] = useTypeIcon(data.types);
+  const [typePokemonImageStyles, setTypePokemonImageStyles] = useState([]);
+
+  useEffect(() => {
+    setTypePokemonImageStyles(typePokemon);
+  }, [typePokemon]);
 
   return (
     <>
@@ -28,12 +30,12 @@ export const Pokemon = ({ data, ability, error }) => {
         <Block designBlock='header__article--pokemon'>
           <Block>
             <PokemonId id={data.id} />
-            <PokemonType type={data.types} icon={typeIcon} pokemonTypeIcon={setPokemonTypeIcon} />
+            <PokemonType pokemonType={typePokemonImageStyles} />
             <PokemonName name={data.name} />
             <PokemonAbility ability={ability} />
             <Details />
           </Block>
-          <PokemonTypeDecoration typeIcon={typeIcon} />
+          <PokemonTypeDecoration typeIcon={typePokemonImageStyles} />
           <Block designBlock='pokemon__header--img'>
             <PokemonImage pokeImage={data} />
           </Block>

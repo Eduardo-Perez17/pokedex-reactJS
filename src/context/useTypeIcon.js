@@ -1,15 +1,17 @@
 import { useState, useEffect } from 'react';
 import { icons } from '../utils/constants/constant';
 
-const useTypeIcon = () => {
-  const [pokemonTypeIcon, setPokemonTypeIcon] = useState();
-  const [typeIcon, setTypeIcon] = useState();
+const useTypeIcon = data => {
+  const [typePokemon, setTypePokemon] = useState([]);
 
   useEffect(() => {
-    setTypeIcon(icons[pokemonTypeIcon]);
-  });
+    const typesPokemon = [];
 
-  return [setPokemonTypeIcon, typeIcon, pokemonTypeIcon];
+    data.map(type => typesPokemon.push({ image: icons[type.type.name], style: type.type.name }));
+    setTypePokemon(typesPokemon);
+  }, [data]);
+
+  return [typePokemon];
 };
 
 export default useTypeIcon;
