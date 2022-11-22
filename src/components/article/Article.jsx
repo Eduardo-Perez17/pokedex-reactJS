@@ -29,12 +29,13 @@ export const Article = () => {
         </Block>
       </Block>
       <hr />
-      {pokemonSearch && (
+      {pokemonSearch ? (
         <Block designBlock='pokemon-article'>
           <PokemonArticle pokemonData={pokemonSearch} />
         </Block>
+      ) : (
+        <MainAllPokemon />
       )}
-      <MainAllPokemon />
     </Block>
   );
 };

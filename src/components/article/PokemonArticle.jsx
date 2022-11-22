@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import useTypeIcon from '../../context/useTypeIcon';
 import { iconsCard } from '../../utils/constants/constant';
 
@@ -6,17 +7,23 @@ import { PokemonName } from '../pokemon/PokemonName';
 import { PokemonType } from '../pokemon/PokemonType';
 import { Block } from '../Block';
 import { Image } from '../Image';
-import { Title } from '../Title';
 
 import '../../assets/styles/pokemonArticle.css';
 
 export const PokemonArticle = ({ pokemonData }) => {
-  const [typeIcon] = useTypeIcon(pokemonData);
+  const [typePokemon] = useTypeIcon(pokemonData.types);
+  const [typeBackground, setTypeBackground] = useState('');
+
+  useEffect(() => {
+    typePokemon.map(typeStyle => {
+      setTypeBackground(typeStyle.style);
+    });
+  }, [typePokemon]);
 
   return (
     <>
       {pokemonData && (
-        <Block designBlock={`card__pokemon ${typeIcon}_background`}>
+        <Block designBlock={`card__pokemon ${typeBackground}_background`}>
           <Block designBlock='card__pokemon--main-img'>
             <Image
               image={pokemonData.sprites.other.home['front_default']}
@@ -29,7 +36,7 @@ export const PokemonArticle = ({ pokemonData }) => {
             <PokemonName name={pokemonData.name} />
           </Block>
           <Block designBlock='card__pokemon--info-type'>
-            <PokemonType type={pokemonData.types} icon={typeIcon} />
+            <PokemonType pokemonType={typePokemon} />
           </Block>
           <Block designBlock='card__pokemon--info-secundary'>
             <Block designBlock='card__pokemon--info-secundary-item'>

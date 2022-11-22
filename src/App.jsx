@@ -16,9 +16,9 @@ function App() {
         <HeaderArticle />
       </Grid>
       <WavesDesign />
-      {/* <Grid designGrid='article'>
+      <Grid designGrid='article'>
         <Article />
-      </Grid> */}
+      </Grid>
       <Slider />
       <Grid designGrid='footer'>
         <Footer />
