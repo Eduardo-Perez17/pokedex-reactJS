@@ -28,7 +28,9 @@ export const ModalPokemon = ({ handdleModalOpen, modalOpen, dataPokemon: data, v
               <React.Fragment key={stats.stat.name}>
                 <ContainerParagraph paragraph={stats.stat.name} designContainerParagraph='state__name' />
                 <Block designBlock='main__stats'>
-                  <ContainerParagraph paragraph={`${stats.base_stat}%`} />
+                  {console.log(stats)}
+                  <ContainerParagraph paragraph={`${stats.base_stat}`} designContainerParagraph='state__base--info' />
+                  <div style={{ width: stats.base_stat + '%' }} className='state__base--info-percentage'></div>
                 </Block>
               </React.Fragment>
             ))}

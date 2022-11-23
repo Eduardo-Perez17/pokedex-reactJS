@@ -41,9 +41,18 @@
   margin: 0;
 }
 
+.main__stats {
+  display: flex;
+  align-items: center;
+}
+
 .pokemon__info--stats {
   text-transform: capitalize;
   padding: 10px 20px;
+}
+
+.state__base--info {
+  padding-right: 20px;
 }
 
 .state__name {
@@ -51,11 +60,11 @@
   margin: 0;
 }
 
-/* .main__stats p::after {
-  content: '';
-  background-color: #fff;
-  width: 100px;
-} */
+.state__base--info-percentage {
+  border-radius: 10px;
+  background-color: #c63f35;
+  height: 10px;
+}
 
 .card__pokemon button {
   width: 100%;
