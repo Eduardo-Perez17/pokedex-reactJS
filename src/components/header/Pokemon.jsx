@@ -33,7 +33,7 @@ export const Pokemon = ({ data, ability, error }) => {
             <PokemonType pokemonType={typePokemonImageStyles} />
             <PokemonName name={data.name} />
             <PokemonAbility ability={ability} />
-            <Details />
+            <Details dataPokemon={data} />
           </Block>
           <PokemonTypeDecoration typeIcon={typePokemonImageStyles} />
           <Block designBlock='pokemon__header--img'>

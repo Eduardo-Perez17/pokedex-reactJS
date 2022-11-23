@@ -5,12 +5,13 @@ import { iconsCard } from '../../utils/constants/constant';
 import { ContainerParagraph } from '../ContainerParagraph';
 import { PokemonName } from '../pokemon/PokemonName';
 import { PokemonType } from '../pokemon/PokemonType';
+import { Details } from '../Details';
 import { Block } from '../Block';
 import { Image } from '../Image';
 
 import '../../assets/styles/pokemonArticle.css';
 
-export const PokemonArticle = ({ pokemonData }) => {
+export const PokemonArticle = ({ pokemonData, validationMoreDetails }) => {
   const [typePokemon] = useTypeIcon(pokemonData.types);
   const [typeBackground, setTypeBackground] = useState('');
 
@@ -54,6 +55,7 @@ export const PokemonArticle = ({ pokemonData }) => {
               </Block>
             </Block>
           </Block>
+          {validationMoreDetails ? null : <Details dataPokemon={pokemonData} />}
         </Block>
       )}
     </>

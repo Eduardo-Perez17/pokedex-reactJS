@@ -12,8 +12,12 @@ export const Header = () => {
     <Block designBlock='block header-son'>
       <Image image={logo} alternativeText={logo} designImage='header__logo image' />
       <Block designBlock='header__icon'>
-        <Image image={instagram} alternativeText={instagram} designImage='header__icon--item' />
-        <Image image={github} alternativeText={github} designImage='header__icon--item' />
+        <a href='https://www.instagram.com/srperez23/' target='_blank'>
+          <Image image={instagram} alternativeText={instagram} designImage='header__icon--item' />
+        </a>
+        <a href='https://github.com/Eduardo-Perez17?tab=repositories' target='_blank'>
+          <Image image={github} alternativeText={github} designImage='header__icon--item' />
+        </a>
       </Block>
     </Block>
   );

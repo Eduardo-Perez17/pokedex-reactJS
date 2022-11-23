@@ -7,9 +7,16 @@ import { Block } from './Block';
 
 import info from '../assets/img/info.png';
 
-export const Details = () => {
+// SI LE LLEGA EL EVENTO QUE MUESTRE EL BOTON Y SI NO LO LLEGA QUE NO LO MUESTRO
+
+export const Details = ({ dataPokemon }) => {
   const [modalPokemon, setModalPokemon] = useState(false);
-  const handleModal = () => setModalPokemon(!modalPokemon);
+  const [validationMoreDetails, setValidationMoreDetails] = useState(false);
+
+  const handleModal = () => {
+    setModalPokemon(!modalPokemon);
+    setValidationMoreDetails(!validationMoreDetails);
+  };
 
   return (
     <Block designBlock='header__details'>
@@ -17,7 +24,8 @@ export const Details = () => {
         more details
         <Image image={info} alternativeText={info} designImage='icon icon__button--header' />
       </Button>
-      {modalPokemon && <ModalPokemon />}
+
+      {modalPokemon && <ModalPokemon handdleModalOpen={handleModal} modalOpen={modalPokemon} dataPokemon={dataPokemon} validationMoreDetails={validationMoreDetails} />}
     </Block>
   );
 };
