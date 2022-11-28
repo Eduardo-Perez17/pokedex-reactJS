@@ -11,7 +11,7 @@ import { Title } from '../Title';
 import '../../assets/styles/article.css';
 
 // ! TERMINAR EL BOTON DE HOME
-// ! FILTER ANTES DE HACER EL LLAMADO A TODOS LOS POKEMONES
+// ! FILTER POKEMONES
 
 export const Article = () => {
   const [pokemonSearch, setPokemonSearch] = useState();

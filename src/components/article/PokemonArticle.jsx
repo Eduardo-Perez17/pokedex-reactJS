@@ -23,7 +23,7 @@ export const PokemonArticle = ({ pokemonData, validationMoreDetails }) => {
 
   return (
     <>
-      {pokemonData && (
+      {pokemonData ? (
         <Block designBlock={`card__pokemon ${typeBackground}_background`}>
           <Block designBlock='card__pokemon--main-img'>
             <Image
@@ -57,7 +57,7 @@ export const PokemonArticle = ({ pokemonData, validationMoreDetails }) => {
           </Block>
           {validationMoreDetails ? null : <Details dataPokemon={pokemonData} />}
         </Block>
-      )}
+      ) : null}
     </>
   );
 };

@@ -5,7 +5,7 @@ import { Image } from '../Image';
 export const PokemonTypeDecoration = ({ typeIcon }) => {
   return (
     <>
-      {typeIcon && (
+      {typeIcon ? (
         <Block designBlock='main__decoration--type'>
           {typeIcon.map(icon => (
             <React.Fragment key={icon.style}>
@@ -13,7 +13,7 @@ export const PokemonTypeDecoration = ({ typeIcon }) => {
             </React.Fragment>
           ))}
         </Block>
-      )}
+      ) : null}
     </>
   );
 };

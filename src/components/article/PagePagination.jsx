@@ -5,8 +5,6 @@ import { Button } from '../Button';
 import { Block } from '../Block';
 import { Image } from '../Image';
 
-// ! VALIDAR QUE EL PREVIOUS
-
 export const PagePagination = ({ page, functionPage }) => {
   const handleNext = () => {
     const next_page = Math.max(page + 1, 0);

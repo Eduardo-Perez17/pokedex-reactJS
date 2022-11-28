@@ -2,7 +2,6 @@ import { Header } from './components/header/Header';
 import { HeaderArticle } from './components/header/HeaderArticle';
 import { WavesDesign } from './components/header/WavesDesign';
 import { Article } from './components/article/Article';
-import { Slider } from './components/article/Slider';
 import { Footer } from './components/Footer';
 import { Grid } from './components/Grid';
 
@@ -19,7 +18,6 @@ function App() {
       <Grid designGrid='article'>
         <Article />
       </Grid>
-      <Slider />
       <Grid designGrid='footer'>
         <Footer />
       </Grid>

@@ -52,7 +52,7 @@ export const HeaderArticle = () => {
 
   return (
     <>
-      {errorNotification && <ErrorNotification />}
+      {errorNotification ? <ErrorNotification /> : null}
       {pokemonRandom ? (
         <>
           <Pokemon data={pokemonRandom} ability={pokemonRandomAbility} error={errorFetchData} />

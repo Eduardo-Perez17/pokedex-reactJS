@@ -2,13 +2,10 @@ import { useState } from 'react';
 import { dataPokemon } from '../../services/callAllPokemon';
 
 import { Button } from '../Button';
-import { Block } from '../Block';
 import { Input } from '../Input';
 import { Image } from '../Image';
 
 import search from '../../assets/img/search.png';
-
-// ! HACER EL 404 NOT FOUND
 
 export const ArticleSearchForm = ({ setPokemonValue }) => {
   const [inputPokemon, setInputPokemon] = useState('');
@@ -26,7 +23,7 @@ export const ArticleSearchForm = ({ setPokemonValue }) => {
     <form className='form__search--pokemon main-form' onSubmit={searchPokemonDataHandle}>
       <Input typeInput='text' designInput='input' valueInput={inputPokemon} onChange={handleInputPokemon} />
 
-      <Button typeButton='button' onClick={searchPokemonDataHandle} designButton='button btn-article-pagination'>
+      <Button typeButton='button' onClick={inputPokemon === '' ? null : searchPokemonDataHandle} designButton='button btn-article-pagination'>
         <Image image={search} alternativeText={search} designImage='search__btn' />
       </Button>
     </form>
