@@ -54,7 +54,7 @@
 }
 
 .grass {
-  background-color: #1cd80e;
+  background-color: #25c41a;
 }
 
 .poison {
@@ -62,7 +62,7 @@
 }
 
 .fire {
-  background-color: #ff9900;
+  background-color: #ff972e;
   padding: 0;
 }
 
@@ -79,7 +79,7 @@
 }
 
 .normal {
-  background-color: #9fa39d;
+  background-color: #b3b5b3;
 }
 
 .dark,
@@ -101,7 +101,7 @@
 }
 
 .electric {
-  background-color: #ffde00;
+  background-color: #ead64f;
 }
 
 .fighting {

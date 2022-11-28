@@ -28,7 +28,6 @@ export const Article = () => {
           <ArticleSearchForm setPokemonValue={setPokemonSearch} />
         </Block>
       </Block>
-      <hr />
       {pokemonSearch ? (
         <Block designBlock='pokemon-article'>
           <PokemonArticle pokemonData={pokemonSearch} />

@@ -4,6 +4,8 @@ import { dataPokemon } from '../../services/callAllPokemon';
 import { PokemonTypeMainMap } from './PokemonTypeMainMap';
 import { Block } from '../Block';
 
+// TODO MANEJAR LOS ERRORES
+
 export const ArticleSearchTypesPokemon = () => {
   const [typesPokemonData, setTypesPokemonData] = useState();
 
