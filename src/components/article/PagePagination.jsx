@@ -20,11 +20,9 @@ export const PagePagination = ({ page, functionPage }) => {
     <Block designBlock='main__button--page'>
       <Button typeButton='button' onClick={handlePrevious} designButton='button btn-article-pagination'>
         <Image image={iconSlice.left} alternativeText={iconSlice.left} designImage='icon__button--left icon__button--page' />
-        previous
       </Button>
 
       <Button typeButton='button' onClick={handleNext} designButton='button btn-article-pagination'>
-        next
         <Image image={iconSlice.rigth} alternativeText={iconSlice.rigth} designImage='icon__button--left icon__button--page' />
       </Button>
     </Block>

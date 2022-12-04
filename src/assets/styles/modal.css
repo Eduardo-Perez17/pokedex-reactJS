@@ -13,13 +13,20 @@
 }
 
 .modal__container {
+  height: 90%;
   overflow: scroll;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   color: #ffff;
   position: relative;
   top: 2rem;
-  background-color: #000000a6;
+  background-color: #000000e2;
+}
+
+.modal__container::-webkit-scrollbar-thumb {
+  background-color: #c63f35;
+  border-radius: 4px;
+  height: 10px;
 }
 
 .modal__close-button {
@@ -75,6 +82,37 @@
   transition: 0.2s ease-in-out;
 }
 
+.more__data--info {
+  margin: 30px 0;
+}
+
+.pokemon__specie {
+  margin: 0 20px;
+}
+
+.more__data--pokemon {
+  display: contents;
+}
+
+.more__data--pokemon h3 {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.main__egg {
+  display: flex;
+}
+
+.main__egg p {
+  margin: 0;
+  padding-right: 10px;
+}
+
+.more__data--info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
 @media screen and (min-width: 420px) and (max-width: 500px) {
   .modal__container {
     width: 90%;
@@ -89,17 +127,13 @@
 
 @media screen and (min-width: 768px) {
   .modal__container {
+    height: 70%;
     width: 80%;
-  }
-  .modal__container {
-    overflow: hidden;
+
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .modal__container {
     position: relative;
-    top: 6rem;
+    top: 4rem;
   }
 
   .card__pokemon button:hover {

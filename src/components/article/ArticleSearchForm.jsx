@@ -31,7 +31,6 @@ export const ArticleSearchForm = ({ setPokemonValue }) => {
     <>
       <form className='form__search--pokemon main-form' onSubmit={searchPokemonDataHandle}>
         <Input typeInput='text' designInput='input' valueInput={inputPokemon} onChange={handleInputPokemon} />
-
         <Button typeButton='button' onClick={inputPokemon === '' ? null : searchPokemonDataHandle} designButton='button btn-article-pagination'>
           <Image image={search} alternativeText={search} designImage='search__btn' />
         </Button>
