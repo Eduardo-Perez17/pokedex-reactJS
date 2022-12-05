@@ -59,7 +59,7 @@ export const ModalPokemon = ({ handdleModalOpen, modalOpen, dataPokemon: data, v
             </Title>
             {ability ? (
               <Block designBlock='ability'>
-                {ability.effect_entries ? (
+                {ability.effect_entries && ability.effect_entries[1] ? (
                   <>
                     <Title>
                       <h4>Primary effect</h4>
@@ -70,7 +70,9 @@ export const ModalPokemon = ({ handdleModalOpen, modalOpen, dataPokemon: data, v
                     </Title>
                     <ContainerParagraph paragraph={ability.effect_entries[1].short_effect} />
                   </>
-                ) : null}
+                ) : (
+                  <ContainerParagraph paragraph='this pokemon has no main ability' />
+                )}
               </Block>
             ) : (
               <ContainerParagraph paragraph='data error in ability' />
