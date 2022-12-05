@@ -86,7 +86,8 @@
   margin: 30px 0;
 }
 
-.pokemon__specie {
+.pokemon__specie,
+.pokemon__ability {
   margin: 0 20px;
 }
 

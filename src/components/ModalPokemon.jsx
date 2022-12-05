@@ -31,14 +31,11 @@ export const ModalPokemon = ({ handdleModalOpen, modalOpen, dataPokemon: data, v
 
   return ReactDOM.createPortal(
     <Block designBlock='modal'>
-      {ability ? console.log(specie) : null}
       <Block designBlock='modal__container'>
-        <Block>
-          <PokemonArticle pokemonData={data} validationMoreDetails={validationMoreDetails} />
-          <Button typeButton='button' designButton='button modal__close-button' onClick={() => handdleModalOpen(!modalOpen)}>
-            ✖
-          </Button>
-        </Block>
+        <PokemonArticle pokemonData={data} validationMoreDetails={validationMoreDetails} />
+        <Button typeButton='button' designButton='button modal__close-button' onClick={() => handdleModalOpen(!modalOpen)}>
+          ✖
+        </Button>
         <Block designBlock='pokemon__info'>
           <Title>
             <h2>Stats</h2>
@@ -56,6 +53,29 @@ export const ModalPokemon = ({ handdleModalOpen, modalOpen, dataPokemon: data, v
           </Block>
         </Block>
         <Block designBlock='more__data--pokemon'>
+          <Block designBlock='pokemon__ability'>
+            <Title>
+              <h3>Pokemon Ability</h3>
+            </Title>
+            {ability ? (
+              <Block designBlock='ability'>
+                {ability.effect_entries ? (
+                  <>
+                    <Title>
+                      <h4>Primary effect</h4>
+                    </Title>
+                    <PokemonAbility ability={ability} />
+                    <Title>
+                      <h4>Secondary effect</h4>
+                    </Title>
+                    <ContainerParagraph paragraph={ability.effect_entries[1].short_effect} />
+                  </>
+                ) : null}
+              </Block>
+            ) : (
+              <ContainerParagraph paragraph='data error in ability' />
+            )}
+          </Block>
           <Block designBlock='pokemon__specie'>
             <Title>
               <h3>Pokemon Specie</h3>
@@ -90,38 +110,7 @@ export const ModalPokemon = ({ handdleModalOpen, modalOpen, dataPokemon: data, v
               <ContainerParagraph paragraph='data error in species' />
             )}
           </Block>
-          <Block designBlock='pokemon__ability'>
-            <Title>
-              <h3>Pokemon Ability</h3>
-            </Title>
-            {ability ? (
-              <Block designBlock='ability'>
-                {ability.effect_entries ? (
-                  <>
-                    <Title>
-                      <h4>Primary effect</h4>
-                    </Title>
-                    <PokemonAbility ability={ability} />
-                    <Title>
-                      <h4>Secondary effect</h4>
-                    </Title>
-                    <ContainerParagraph paragraph={ability.effect_entries[1].short_effect} />
-                  </>
-                ) : null}
-              </Block>
-            ) : (
-              <ContainerParagraph paragraph='data error in ability' />
-            )}
-          </Block>
-          <Block designBlock='main__varieties'>
-            {specie ? (
-              <>
-                <></>
-              </>
-            ) : (
-              <ContainerParagraph paragraph='data error in varieties' />
-            )}
-          </Block>
+          <Block designBlock='main__varieties'></Block>
         </Block>
       </Block>
     </Block>,
