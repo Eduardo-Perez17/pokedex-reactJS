@@ -21,11 +21,5 @@ export const useSearchPokemonData = (inputPokemon) => {
     }
   };
 
-  if (pokemonSearch) {
-    pokemonSearch.types.forEach((element) => {
-      console.log(element.type.name);
-    });
-  }
-
   return [pokemonSearch, searchError, searchPokemonDataHandle, setPokemonSearch];
 };

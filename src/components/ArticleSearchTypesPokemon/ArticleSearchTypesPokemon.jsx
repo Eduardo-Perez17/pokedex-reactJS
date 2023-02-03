@@ -7,9 +7,7 @@ import { Block } from '../Block';
 const ArticleSearchTypesPokemon = () => {
   const [typesPokemonData] = useSearchTypesPokemon();
 
-  const searchTypesHandle = (type) => {
-    console.log(type);
-  };
+  const searchTypesHandle = (type) => {};
 
   return (
     <>
