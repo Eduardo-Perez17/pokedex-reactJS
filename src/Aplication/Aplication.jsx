@@ -8,11 +8,11 @@ import '../assets/styles/pokemonArticle.css';
 
 import { HeaderArticle } from '../components/HeaderArticle';
 import { WavesDesign } from '../components/WavesDesign';
-import { Article } from '../components/Article';
 import { Footer } from '../components/Footer';
+import { Article } from '../components/Article';
 import { Header } from '../components/Header';
-import { Link } from '../components/Link';
 import { Image } from '../components/Image';
+import { Link } from '../components/Link';
 import { Layaout } from '../Layaout';
 
 const Aplication = () => {
@@ -21,6 +21,7 @@ const Aplication = () => {
 
   const [typePokemon] = useTypeIcon(pokemonRandom?.types);
   const [typeBackground] = useTypeBackground(typePokemon);
+
   return (
     <>
       <Layaout designGrid={typeBackground ? `${typeBackground}_background header` : 'header_default header'}>
