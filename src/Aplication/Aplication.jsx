@@ -3,8 +3,8 @@ import { useTypeBackground } from '../custom/TypeBackground/useTypeBackground';
 import { useHeaderArticleData } from '../custom/HeaderArticleData/useHeaderArticleData';
 import { ICON_TOP } from '../utils/images';
 
-import '../assets/styles/index.css';
 import '../assets/styles/pokemonArticle.css';
+import '../assets/styles/index.css';
 
 import { HeaderArticle } from '../components/HeaderArticle';
 import { WavesDesign } from '../components/WavesDesign';
