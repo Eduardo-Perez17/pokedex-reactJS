@@ -1,6 +1,9 @@
 .header {
-  background-image: linear-gradient(to right top, #ff7c37, #ff8a32, #ff972e, #ffa52b, #ffb22a, #ffbb28, #fec426, #fccd26, #f9d422, #f5db1f, #f0e31e, #ebea1f);
   height: 100%;
+}
+
+.header_default {
+  background-image: linear-gradient(to right bottom, #fba97e, #fa9c6a, #f88e57, #f58043, #f2722e);
 }
 
 .burble {

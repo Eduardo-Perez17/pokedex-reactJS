@@ -137,14 +137,6 @@
   padding: 0px 5px;
 }
 
-.search__error {
-  width: 300px;
-  margin-top: -13px;
-  background-color: #c63f35;
-  border-radius: 2px;
-  text-align: center;
-}
-
 @media screen and (min-width: 768px) {
   .search__article {
     display: grid;
@@ -154,8 +146,7 @@
   }
 
   .form__search--pokemon {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
     justify-content: end;
   }
 
