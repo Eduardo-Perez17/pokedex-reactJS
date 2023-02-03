@@ -28,12 +28,12 @@ const HeaderArticle = ({ pokemonRandom, pokemonRandomAbility, errorFetchData, er
             typeButton='button'
             onClickEvent={resolveDataAPI}
             designButton='button header__details--button btn-refresh'>
-            refresh
             <Image
               image={IMAGE_REFRESH.image}
               alternativeText={IMAGE_REFRESH.alt}
               designImage='icon icon__button--header'
             />
+            refresh
           </Button>
         </>
       ) : (

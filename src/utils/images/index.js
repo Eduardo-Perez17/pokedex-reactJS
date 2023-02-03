@@ -9,6 +9,7 @@ import searchIcon from '../../assets/img/search.png';
 import infoIcon from '../../assets/img/info.png';
 
 import iconTop from '../../assets/img/top.png';
+import homeIcon from '../../assets/img/home.png';
 
 import heightIcon from '../../assets/img/pokemon/height.png';
 import weightIcon from '../../assets/img/pokemon/weight.png';
@@ -23,6 +24,11 @@ export const ICON_CARD = {
 export const ICON_SLIDE = {
   left: leftIcon,
   rigth: rigthIcon,
+};
+
+export const ICON_HOME = {
+  image: homeIcon,
+  alt: 'home icon',
 };
 
 export const ICON_TOP = {

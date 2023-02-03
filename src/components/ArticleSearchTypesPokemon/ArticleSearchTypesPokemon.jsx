@@ -7,13 +7,17 @@ import { Block } from '../Block';
 const ArticleSearchTypesPokemon = () => {
   const [typesPokemonData] = useSearchTypesPokemon();
 
+  const searchTypesHandle = (type) => {
+    console.log(type);
+  };
+
   return (
     <>
       {typesPokemonData && (
         <Block designBlock='search__type--main'>
           {typesPokemonData.results.map((nameType) => (
             <React.Fragment key={nameType.name}>
-              <PokemonTypeMainMap typePokemon={nameType.name} />
+              <PokemonTypeMainMap typePokemon={nameType.name} eventSearchType={() => searchTypesHandle(nameType)} />
             </React.Fragment>
           ))}
         </Block>

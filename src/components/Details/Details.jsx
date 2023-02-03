@@ -18,8 +18,8 @@ const Details = ({ dataPokemon }) => {
   return (
     <Block designBlock='header__details'>
       <Button typeButton='button' designButton='button header__details--button' onClickEvent={handleModal}>
-        more details
         <Image image={IMAGE_INFO.image} alternativeText={IMAGE_INFO.alt} designImage='icon icon__button--header' />
+        more details
       </Button>
 
       {modalPokemon && (

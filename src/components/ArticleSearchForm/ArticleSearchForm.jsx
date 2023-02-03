@@ -1,4 +1,3 @@
-import { useSearchPokemonData } from '../../custom/SearchPokemonData/useSearchPokemonData';
 import { IMAGE_ARTICLE } from '../../utils/images';
 
 import { ContainerParagraph } from '../ContainerParagraph';
@@ -8,11 +7,7 @@ import { Input } from '../Input';
 import { Image } from '../Image';
 import { Form } from '../Form';
 
-const ArticleSearchForm = ({ setPokemonValue }) => {
-  const [inputPokemon, searchError, handleInputPokemon, searchPokemonDataHandle] = useSearchPokemonData({
-    setPokemonValue,
-  });
-
+const ArticleSearchForm = ({ inputPokemon, searchError, searchPokemonDataHandle, handleInputPokemon }) => {
   return (
     <>
       <Form formStyle='form__search--pokemon main-form' formEventSubmit={searchPokemonDataHandle}>
@@ -23,10 +18,7 @@ const ArticleSearchForm = ({ setPokemonValue }) => {
           onChangeEvent={handleInputPokemon}
           nameInput='input'
         />
-        <Button
-          typeButton='button'
-          onClickEvent={inputPokemon && searchPokemonDataHandle}
-          designButton='button btn-article-pagination'>
+        <Button typeButton='button' onClickEvent={searchPokemonDataHandle} designButton='button btn-article-pagination'>
           <Image image={IMAGE_ARTICLE.image} alternativeText={IMAGE_ARTICLE.alt} designImage='search__btn' />
         </Button>
       </Form>

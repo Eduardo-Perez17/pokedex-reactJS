@@ -19,7 +19,7 @@ const CardPokemonInfoSecundary = ({ pokemonData }) => {
         <Block designBlock='card__pokemon--info-heigth'>
           <Image image={ICON_CARD.height} alternativeText={ICON_CARD.height} />
           <ContainerParagraph>
-            {pokemonData.height < 10 ? `0.${pokemonData.height} m` : `${pokemonData.height} m`}
+            {pokemonData.height < 10 ? `0${pokemonData.height} cm` : `${pokemonData.height} cm`}
           </ContainerParagraph>
         </Block>
       </Block>

@@ -5,5 +5,9 @@
 }
 
 .footer-item {
-  display: grid;
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  text-align: center;
+  color: #ffffff96;
 }

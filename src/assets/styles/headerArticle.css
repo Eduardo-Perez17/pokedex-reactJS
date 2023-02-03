@@ -15,17 +15,18 @@
 
 .header__details--button {
   margin: 20px 0;
-}
-
-.btn-refresh {
-  margin-bottom: 150px;
+  padding: 10px;
   display: flex;
+  gap: 10px;
   justify-content: center;
   align-items: center;
 }
 
+.btn-refresh {
+  margin-bottom: 150px;
+}
+
 .icon__button--header {
-  padding: 10px 15px;
   width: 15px;
 }
 

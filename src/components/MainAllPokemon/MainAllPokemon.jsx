@@ -6,7 +6,7 @@ import { LoaderHeader } from '../Loaders/LoadersHeader';
 import { PokemonArticle } from '../PokemonArticle';
 import { Block } from '../Block';
 
-const MainAllPokemon = () => {
+const MainAllPokemon = ({ home }) => {
   const [pokemon, setPokemon] = useState();
   const [page, setPage] = useState(0);
 
@@ -21,19 +21,23 @@ const MainAllPokemon = () => {
 
   return (
     <>
-      <PagePagination functionPage={setPage} page={page} />
-      {pokemon ? (
-        <Block designBlock='all__pokemon--article'>
-          {pokemon.map((allDataPokemon) => (
-            <React.Fragment key={allDataPokemon.id}>
-              <PokemonArticle pokemonData={allDataPokemon} />
-            </React.Fragment>
-          ))}
-        </Block>
-      ) : (
-        <LoaderHeader />
+      {!home && (
+        <>
+          <PagePagination functionPage={setPage} page={page} />
+          {pokemon ? (
+            <Block designBlock='all__pokemon--article'>
+              {pokemon.map((allDataPokemon) => (
+                <React.Fragment key={allDataPokemon.id}>
+                  <PokemonArticle pokemonData={allDataPokemon} />
+                </React.Fragment>
+              ))}
+            </Block>
+          ) : (
+            <LoaderHeader />
+          )}
+          <PagePagination functionPage={setPage} page={page} />
+        </>
       )}
-      <PagePagination functionPage={setPage} page={page} />
     </>
   );
 };

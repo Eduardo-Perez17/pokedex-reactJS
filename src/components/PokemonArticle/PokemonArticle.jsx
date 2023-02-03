@@ -15,14 +15,14 @@ const PokemonArticle = ({ pokemonData, validationMoreDetails }) => {
 
   return (
     <>
-      {pokemonData ? (
+      {pokemonData && (
         <Block designBlock={`card__pokemon ${typeBackground}_background`}>
           <CardPokemonMain pokemonData={pokemonData} />
           <CardPokemonInfo pokemonData={pokemonData} typePokemon={typePokemon} />
           <CardPokemonInfoSecundary pokemonData={pokemonData} />
-          {validationMoreDetails ? null : <Details dataPokemon={pokemonData} />}
+          {!validationMoreDetails && <Details dataPokemon={pokemonData} />}
         </Block>
-      ) : null}
+      )}
     </>
   );
 };

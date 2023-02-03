@@ -29,7 +29,7 @@ import flying from '../../assets/img/icon/flying.png';
 import dark from '../../assets/img/icon/dark.png';
 import dragon from '../../assets/img/icon/dragon.png';
 import electric from '../../assets/img/icon/electric.png';
-import Fairy from '../../assets/img/icon/Fairy.png';
+import fairy from '../../assets/img/icon/fairy.png';
 import fighting from '../../assets/img/icon/fighting.png';
 import ghost from '../../assets/img/icon/ghost.png';
 import ground from '../../assets/img/icon/ground.png';
@@ -49,7 +49,7 @@ export const icons = {
   flying: flying,
   dark: dark,
   electric: electric,
-  Fairy: Fairy,
+  fairy: fairy,
   fighting: fighting,
   dragon: dragon,
   ghost: ghost,
