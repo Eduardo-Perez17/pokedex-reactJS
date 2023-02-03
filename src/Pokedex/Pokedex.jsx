@@ -15,7 +15,7 @@ import { Image } from '../components/Image';
 import { Link } from '../components/Link';
 import { Layaout } from '../Layaout';
 
-const Aplication = () => {
+const Pokedex = () => {
   const [pokemonRandom, pokemonRandomAbility, errorFetchData, errorNotification, resolveDataAPI] =
     useHeaderArticleData();
 
@@ -46,4 +46,4 @@ const Aplication = () => {
   );
 };
 
-export default Aplication;
+export default Pokedex;

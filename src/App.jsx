@@ -1,7 +1,7 @@
-import { Aplication } from './Aplication';
+import { Pokedex } from './Pokedex';
 
 function App() {
-  return <Aplication />;
+  return <Pokedex />;
 }
 
 export default App;
