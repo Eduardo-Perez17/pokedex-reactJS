@@ -9,7 +9,7 @@ import './assets/styles/index.css';
 import { HeaderArticle } from './components/HeaderArticle';
 import { WavesDesign } from './components/WavesDesign';
 import { Footer } from './components/Footer';
-import { Article } from './components/Article';
+// import { Article } from './components/Article';
 import { Header } from './components/Header';
 import { Image } from './components/Image';
 import { Link } from './components/Link';
@@ -35,7 +35,7 @@ function App() {
       </Layaout>
       <WavesDesign />
       <Layaout designGrid='article'>
-        <Article />
+        {/* <Article /> */}
         <Footer />
       </Layaout>
       <Link linkDesign='main-top' hook='#header'>
