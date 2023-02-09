@@ -13,8 +13,12 @@ import homeIcon from '../../assets/img/home.png';
 
 import heightIcon from '../../assets/img/pokemon/height.png';
 import weightIcon from '../../assets/img/pokemon/weight.png';
+import shareIcon from '../../assets/img/pokemon/share.png';
+
 import leftIcon from '../../assets/img/left.png';
 import rigthIcon from '../../assets/img/right.png';
+import checkIcon from '../../assets/img/cheque.png';
+import errorIcon from '../../assets/img/error.png';
 
 export const ICON_CARD = {
   height: heightIcon,
@@ -69,4 +73,19 @@ export const IMAGE_REFRESH = {
 export const IMAGE_SNORLAX = {
   image: snorlaxImage,
   alt: 'pokemon snorlax sad',
+};
+
+export const ICON_SHARE = {
+  image: shareIcon,
+  alt: 'icon share',
+};
+
+export const ICON_CHECKED = {
+  image: checkIcon,
+  alt: 'icon check',
+};
+
+export const ICON_ERROR = {
+  image: errorIcon,
+  alt: 'icon error',
 };

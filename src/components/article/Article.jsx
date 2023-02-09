@@ -4,7 +4,7 @@ import { useSearchPokemonData } from '../../custom/SearchPokemonData/useSearchPo
 
 import '../../assets/styles/article.css';
 
-import { ArticleSearchTypesPokemon } from '../ArticleSearchTypesPokemon';
+// import { ArticleSearchTypesPokemon } from '../ArticleSearchTypesPokemon';
 import { ContainerParagraph } from '../ContainerParagraph';
 import { ArticleSearchForm } from '../ArticleSearchForm';
 import { PokemonArticle } from '../PokemonArticle';
@@ -24,13 +24,9 @@ const Article = () => {
   return (
     <>
       <Block designBlock='article-main'>
-        <Button designButton='button button__home' onClickEvent={handleReturnHome}>
-          <Image image={ICON_HOME.image} alternativeText={ICON_HOME.alt} />
-          Home
-        </Button>
-        <Title size='lg'>Search for types</Title>
+        <Title size='lg'>Pokemon Search</Title>
         <Block designBlock='search__article'>
-          <ArticleSearchTypesPokemon />
+          {/* <ArticleSearchTypesPokemon /> */}
           <Block designBlock='form__serch'>
             <ContainerParagraph designContainerParagraph='type__writer'>search for id or name</ContainerParagraph>
             <ArticleSearchForm
@@ -39,6 +35,10 @@ const Article = () => {
               searchError={searchError}
             />
           </Block>
+          <Button designButton='button button__home' onClickEvent={handleReturnHome}>
+            <Image image={ICON_HOME.image} alternativeText={ICON_HOME.alt} />
+            Home
+          </Button>
         </Block>
         {pokemonSearch ? (
           <Block designBlock='pokemon-article'>

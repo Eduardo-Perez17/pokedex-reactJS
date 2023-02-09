@@ -62,6 +62,34 @@
   margin-top: -20px;
 }
 
+.share__button {
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.share__button .share {
+  width: 100px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.share__button .share img {
+  width: 16px;
+}
+
+.card__pokemon .main__error--notification {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__pokemon .main__error--notification img {
+  width: 25px;
+}
+
 .poison_background {
   background-image: linear-gradient(to right bottom, #e46af0, #c955d4, #af40b9, #962b9f, #7d1385);
 }

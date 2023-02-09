@@ -1,0 +1,18 @@
+{
+  "short_name": "Pokedex",
+  "name": "Pokedex ReactJS",
+  "icons": [
+    {
+      "src": "/pokebola.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#ffffff",
+  "background_color": "#060b28",
+  "related_applications": [],
+  "prefer_related_applications": false
+}
