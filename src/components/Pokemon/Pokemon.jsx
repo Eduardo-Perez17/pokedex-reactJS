@@ -1,23 +1,31 @@
+import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { useTypeIcon } from '../../custom/TypeIcon/useTypeIcon';
 import { CONTAINER, ITEM } from '../../utils/Animation';
+import { DETAILS } from '../../utils/path';
 
 import '../../assets/styles/headerArticle.css';
 
-import { PokemonTypeDecoration } from '../PokemonTypeDecoration';
-import { HeaderError } from '../HeaderError';
-// import { Details } from '../Details';
+import { useTypeIcon } from '../../custom/TypeIcon/useTypeIcon';
+import { useData } from '../../context/dataPokemonDetails/DataPokemonProvider';
 
+import { PokemonTypeDecoration } from '../PokemonTypeDecoration';
 import { PokemonAbility } from '../PokemonAbility';
 import { PokemonImage } from '../PokemonImage';
 import { PokemonType } from '../PokemonType';
 import { PokemonName } from '../PokemonName';
+import { HeaderError } from '../HeaderError';
 import { PokemonId } from '../PokemonId';
+// import { Details } from '../Details';
 
 const Pokemon = ({ data, ability, error }) => {
   const [typePokemon] = useTypeIcon(data.types);
   const [typePokemonImageStyles, setTypePokemonImageStyles] = useState([]);
+  const { dataProviderHandle } = useData();
+
+  useEffect(() => {
+    dataProviderHandle(data);
+  }, [data]);
 
   useEffect(() => {
     setTypePokemonImageStyles(typePokemon);
@@ -34,7 +42,7 @@ const Pokemon = ({ data, ability, error }) => {
             <PokemonType pokemonType={typePokemonImageStyles} />
             <PokemonName name={data.name} />
             <PokemonAbility ability={ability} />
-            <button>Details</button>
+            <Link to={DETAILS.path}>Details</Link>
             {/* <Details dataPokemon={data} /> */}
           </motion.div>
           <PokemonTypeDecoration typeIcon={typePokemonImageStyles} />
