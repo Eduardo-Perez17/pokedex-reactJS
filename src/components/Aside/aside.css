@@ -1,0 +1,26 @@
+.aside {
+  margin-top: 30px;
+}
+
+.aside__card--main {
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: scroll;
+}
+
+.aside-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 230px;
+  border-radius: 4px;
+}
+
+.aside-card .aside__card--img img {
+  width: 100px;
+}

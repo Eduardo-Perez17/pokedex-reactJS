@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import { useTypeIcon } from '../../custom/TypeIcon/useTypeIcon';
+import { CONTAINER, ITEM } from '../../utils/Animation';
 
 import '../../assets/styles/headerArticle.css';
 
 import { PokemonTypeDecoration } from '../PokemonTypeDecoration';
 import { HeaderError } from '../HeaderError';
-import { Details } from '../Details';
-import { Block } from '../Block';
+// import { Details } from '../Details';
 
 import { PokemonAbility } from '../PokemonAbility';
 import { PokemonImage } from '../PokemonImage';
@@ -27,19 +28,20 @@ const Pokemon = ({ data, ability, error }) => {
       {error ? (
         <HeaderError />
       ) : (
-        <Block designBlock='header__article--pokemon'>
-          <Block>
+        <motion.div variants={CONTAINER} initial='hidden' animate='visible' className='header__article--pokemon'>
+          <motion.div variants={ITEM}>
             <PokemonId id={data.id} />
             <PokemonType pokemonType={typePokemonImageStyles} />
             <PokemonName name={data.name} />
             <PokemonAbility ability={ability} />
-            <Details dataPokemon={data} />
-          </Block>
+            <button>Details</button>
+            {/* <Details dataPokemon={data} /> */}
+          </motion.div>
           <PokemonTypeDecoration typeIcon={typePokemonImageStyles} />
-          <Block designBlock='pokemon__header--img'>
+          <motion.div variants={ITEM} className='pokemon__header--img'>
             <PokemonImage pokeImage={data} />
-          </Block>
-        </Block>
+          </motion.div>
+        </motion.div>
       )}
     </>
   );
