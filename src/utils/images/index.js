@@ -20,6 +20,15 @@ import rigthIcon from '../../assets/img/right.png';
 import checkIcon from '../../assets/img/cheque.png';
 import errorIcon from '../../assets/img/error.png';
 
+import starIcon from '../../assets/img/star.png';
+
+import specieIcon from '../../assets/img/specie.png';
+import experiencieIcon from '../../assets/img/experiencie.png';
+import typeIcon from '../../assets/img/type.png';
+
+import burstIcon from '../../assets/img/explosion.png';
+import favoriteIcon from '../../assets/img/favorito.png';
+
 export const ICON_CARD = {
   height: heightIcon,
   weight: weightIcon,
@@ -88,4 +97,34 @@ export const ICON_CHECKED = {
 export const ICON_ERROR = {
   image: errorIcon,
   alt: 'icon error',
+};
+
+export const ICON_STAR = {
+  image: starIcon,
+  alt: 'icon star',
+};
+
+export const ICON_SPECIE = {
+  image: specieIcon,
+  alt: 'icon specie',
+};
+
+export const ICON_EXPERIENCIE = {
+  image: experiencieIcon,
+  alt: 'icon experiencie',
+};
+
+export const ICON_TYPE = {
+  image: typeIcon,
+  alt: 'icon type',
+};
+
+export const ICON_BURSY = {
+  image: burstIcon,
+  alt: 'burst icon',
+};
+
+export const ICON_FAVORITE = {
+  image: favoriteIcon,
+  alt: 'favorite icon',
 };

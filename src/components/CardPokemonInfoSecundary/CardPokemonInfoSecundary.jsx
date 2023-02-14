@@ -1,6 +1,8 @@
 import { ICON_CARD } from '../../utils/images';
 
 import { ContainerParagraph } from '../ContainerParagraph';
+import { PokemonWeight } from '../PokemonWeight';
+import { PokemonHeight } from '../PokemonHeight';
 import { Block } from '../Block';
 import { Image } from '../Image';
 
@@ -11,16 +13,14 @@ const CardPokemonInfoSecundary = ({ pokemonData }) => {
         <ContainerParagraph>weight</ContainerParagraph>
         <Block designBlock='card__pokemon--info-weight'>
           <Image image={ICON_CARD.weight} alternativeText={ICON_CARD.weight} />
-          <ContainerParagraph>{`${pokemonData.weight} kg`}</ContainerParagraph>
+          <PokemonWeight dataWeight={pokemonData} />
         </Block>
       </Block>
       <Block designBlock='card__pokemon--info-secundary-item'>
         <ContainerParagraph>height</ContainerParagraph>
         <Block designBlock='card__pokemon--info-heigth'>
           <Image image={ICON_CARD.height} alternativeText={ICON_CARD.height} />
-          <ContainerParagraph>
-            {pokemonData.height < 10 ? `0${pokemonData.height} cm` : `${pokemonData.height} cm`}
-          </ContainerParagraph>
+          <PokemonHeight dataHeight={pokemonData} />
         </Block>
       </Block>
     </Block>

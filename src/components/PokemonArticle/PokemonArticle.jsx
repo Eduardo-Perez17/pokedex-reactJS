@@ -1,7 +1,10 @@
+import { Link } from 'react-router-dom';
+import { DETAILS } from '../../utils/path';
 import { useTypeIcon } from '../../custom/TypeIcon/useTypeIcon';
 import { useTypeBackground } from '../../custom/TypeBackground/useTypeBackground';
 import { useSharePokemon } from '../../custom/SharePokemon/useSharePokemon';
-import { ICON_SHARE, ICON_CHECKED, ICON_ERROR } from '../../utils/images';
+import { ICON_SHARE, ICON_CHECKED, ICON_ERROR, IMAGE_INFO } from '../../utils/images';
+import { useData } from '../../context/dataPokemonDetails/DataPokemonProvider';
 
 import '../../assets/styles/pokemonArticle.css';
 
@@ -9,7 +12,6 @@ import { CardPokemonInfoSecundary } from '../CardPokemonInfoSecundary';
 import { CardPokemonMain } from '../CardPokemonMain';
 import { CardPokemonInfo } from '../CardPokemonInfo';
 import { ErrorNotification } from '../ErrorNotification';
-import { Details } from '../Details';
 import { Button } from '../Button';
 import { Block } from '../Block';
 import { Image } from '../Image';
@@ -18,6 +20,9 @@ const PokemonArticle = ({ pokemonData, validationMoreDetails }) => {
   const [typePokemon] = useTypeIcon(pokemonData.types);
   const [typeBackground] = useTypeBackground(typePokemon);
   const [handleShare, notificationChecked, notificationError] = useSharePokemon(pokemonData);
+
+  const { dataProviderHandle } = useData();
+  const newDataProvider = () => dataProviderHandle(pokemonData);
 
   return (
     <>
@@ -44,7 +49,20 @@ const PokemonArticle = ({ pokemonData, validationMoreDetails }) => {
               </ErrorNotification>
             )}
           </Block>
-          {!validationMoreDetails && <Details dataPokemon={pokemonData} />}
+          {!validationMoreDetails && (
+            <Block designBlock='header__details'>
+              <Link to={DETAILS.path}>
+                <Button typeButton='button' designButton='button button-article' onClickEvent={newDataProvider}>
+                  <Image
+                    image={IMAGE_INFO.image}
+                    alternativeText={IMAGE_INFO.alt}
+                    designImage='icon icon__button--header'
+                  />
+                  more details
+                </Button>
+              </Link>
+            </Block>
+          )}
         </Block>
       )}
     </>
