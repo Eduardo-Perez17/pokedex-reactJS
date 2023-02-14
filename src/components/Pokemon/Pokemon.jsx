@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { CONTAINER, ITEM } from '../../utils/Animation';
 import { DETAILS } from '../../utils/path';
+import { IMAGE_INFO } from '../../utils/images';
 
 import '../../assets/styles/headerArticle.css';
 
@@ -16,16 +17,21 @@ import { PokemonType } from '../PokemonType';
 import { PokemonName } from '../PokemonName';
 import { HeaderError } from '../HeaderError';
 import { PokemonId } from '../PokemonId';
-// import { Details } from '../Details';
+import { Button } from '../Button';
+import { Image } from '../Image';
+
+// ! CUANDO PRESIONE UN BOTON MANDAR LA INFORMACION DEL POKEMON, NO ANTES
 
 const Pokemon = ({ data, ability, error }) => {
   const [typePokemon] = useTypeIcon(data.types);
   const [typePokemonImageStyles, setTypePokemonImageStyles] = useState([]);
   const { dataProviderHandle } = useData();
 
-  useEffect(() => {
+  // ! ====================
+  const newDataProvider = () => {
     dataProviderHandle(data);
-  }, [data]);
+  };
+  // ! ====================
 
   useEffect(() => {
     setTypePokemonImageStyles(typePokemon);
@@ -42,8 +48,12 @@ const Pokemon = ({ data, ability, error }) => {
             <PokemonType pokemonType={typePokemonImageStyles} />
             <PokemonName name={data.name} />
             <PokemonAbility ability={ability} />
-            <Link to={DETAILS.path}>Details</Link>
-            {/* <Details dataPokemon={data} /> */}
+            <Link to={DETAILS.path}>
+              <Button onClickEvent={newDataProvider} designButton='button header__details--button button-info'>
+                <Image image={IMAGE_INFO.image} alternativeText={IMAGE_INFO.alt} />
+                {DETAILS.name}
+              </Button>
+            </Link>
           </motion.div>
           <PokemonTypeDecoration typeIcon={typePokemonImageStyles} />
           <motion.div variants={ITEM} className='pokemon__header--img'>

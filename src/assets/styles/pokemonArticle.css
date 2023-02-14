@@ -70,6 +70,7 @@
 }
 
 .share__button .share {
+  padding: 10px;
   width: 100px;
   display: flex;
   justify-content: space-evenly;
@@ -82,6 +83,19 @@
 .card__pokemon .main__error--notification {
   display: flex;
   gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__details a {
+  margin-top: 30px;
+  text-decoration: none;
+  display: grid;
+}
+
+.button-article {
+  display: flex;
+  gap: 10px;
   justify-content: center;
   align-items: center;
 }

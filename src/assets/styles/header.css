@@ -54,6 +54,16 @@
   animation-duration: 6s;
 }
 
+.header__icon a:nth-child(1) {
+  margin-right: 5px;
+  background-color: #fff;
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
 @keyframes burbles {
   0% {
     bottom: 0;

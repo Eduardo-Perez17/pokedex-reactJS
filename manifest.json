@@ -3,7 +3,7 @@
   "name": "Pokedex ReactJS",
   "icons": [
     {
-      "src": "/pokebola.png",
+      "src": "/public/pokebola.png",
       "sizes": "128x128",
       "type": "image/png"
     }

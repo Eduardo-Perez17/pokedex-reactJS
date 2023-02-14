@@ -1,6 +1,6 @@
 # Pokedex con ReactJS
 
-![Captura de la Pokedex](./app.png)
+![Captura de la Pokedex](./public/app.png)
 
 Aplicación que utiliza la API de Pokémon para mostrar pokemones con toda su información. Algunas de las features que tiene son:
 
@@ -20,3 +20,7 @@ Aplicación que utiliza la API de Pokémon para mostrar pokemones con toda su in
 ## Licencia
 
 MIT
+
+## Tareas
+
+- Terminar de poner Loaders

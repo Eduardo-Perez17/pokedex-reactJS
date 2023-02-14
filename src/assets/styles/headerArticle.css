@@ -3,8 +3,20 @@
   color: #fff;
 }
 
+.header__article--pokemon a {
+  text-decoration: none;
+}
+
 .header__id--pokemon {
   font-weight: bold;
+}
+
+.button-info {
+  gap: 10px;
+}
+
+.button-info img {
+  width: 18px;
 }
 
 .header__type--pokemon-item,
@@ -16,13 +28,13 @@
 .header__details--button {
   margin: 20px 0;
   padding: 10px;
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
 }
 
 .btn-refresh {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
   margin-bottom: 150px;
 }
 
