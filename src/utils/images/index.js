@@ -29,6 +29,8 @@ import typeIcon from '../../assets/img/type.png';
 import burstIcon from '../../assets/img/explosion.png';
 import favoriteIcon from '../../assets/img/favorito.png';
 
+import favoriteImage from '../../assets/img/header_favorite.png';
+
 export const ICON_CARD = {
   height: heightIcon,
   weight: weightIcon,
@@ -127,4 +129,9 @@ export const ICON_BURSY = {
 export const ICON_FAVORITE = {
   image: favoriteIcon,
   alt: 'favorite icon',
+};
+
+export const ICON_FAVORITE_IMG = {
+  image: favoriteImage,
+  alt: 'image pokemon',
 };

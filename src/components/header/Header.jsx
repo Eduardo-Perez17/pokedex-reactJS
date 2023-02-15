@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { APP_LOGO, LOGO_INSTAGRAM, LOGO_GITHUB } from '../../utils/images';
+import { APP_LOGO, LOGO_GITHUB } from '../../utils/images';
 import { URL_SOCIAL } from '../../utils/endpoints';
 import { HOME, FAVORITE } from '../../utils/path';
 
@@ -18,9 +18,9 @@ const Header = ({ idHeader, variants }) => {
       </Link>
       <Block designBlock='header__icon'>
         <Link to={FAVORITE.name}>{FAVORITE.name}</Link>
-        <LinkHook hook={URL_SOCIAL.instagram} targetValue='_blank' relValue='noreferrer'>
+        {/* <LinkHook hook={URL_SOCIAL.instagram} targetValue='_blank' relValue='noreferrer'>
           <Image image={LOGO_INSTAGRAM.image} alternativeText={LOGO_INSTAGRAM.alt} designImage='header__icon--item' />
-        </LinkHook>
+        </LinkHook> */}
         <LinkHook hook={URL_SOCIAL.gitHub} targetValue='_blank' relValue='noreferrer'>
           <Image image={LOGO_GITHUB.image} alternativeText={LOGO_GITHUB.alt} designImage='header__icon--item' />
         </LinkHook>

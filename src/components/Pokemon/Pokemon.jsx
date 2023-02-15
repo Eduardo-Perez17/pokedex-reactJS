@@ -20,18 +20,12 @@ import { PokemonId } from '../PokemonId';
 import { Button } from '../Button';
 import { Image } from '../Image';
 
-// ! CUANDO PRESIONE UN BOTON MANDAR LA INFORMACION DEL POKEMON, NO ANTES
-
 const Pokemon = ({ data, ability, error }) => {
   const [typePokemon] = useTypeIcon(data.types);
   const [typePokemonImageStyles, setTypePokemonImageStyles] = useState([]);
   const { dataProviderHandle } = useData();
 
-  // ! ====================
-  const newDataProvider = () => {
-    dataProviderHandle(data);
-  };
-  // ! ====================
+  const newDataProvider = () => dataProviderHandle(data);
 
   useEffect(() => {
     setTypePokemonImageStyles(typePokemon);

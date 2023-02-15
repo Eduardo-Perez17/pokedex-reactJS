@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useData } from '../../../context/dataPokemonDetails/DataPokemonProvider';
 import { useTypeIcon } from '../../../custom/TypeIcon/useTypeIcon';
 import { ICON_FAVORITE } from '../../../utils/images';
 
@@ -15,6 +16,9 @@ import { Image } from '../../Image';
 const PokemonDetailHeader = ({ pokemonData }) => {
   const [typePokemon] = useTypeIcon(pokemonData?.types);
   const [typePokemonImageStyles, setTypePokemonImageStyles] = useState([]);
+  const { dataFavoritePokemon } = useData();
+
+  const pokemonFavoriteHanddle = () => dataFavoritePokemon(pokemonData);
 
   useEffect(() => {
     setTypePokemonImageStyles(typePokemon);
@@ -28,7 +32,7 @@ const PokemonDetailHeader = ({ pokemonData }) => {
             <PokemonId id={pokemonData.id} />
             <PokemonName name={pokemonData.name} />
             <PokemonType pokemonType={typePokemonImageStyles} />
-            <Button designButton='button button-favorite'>
+            <Button designButton='button button-favorite' onClickEvent={pokemonFavoriteHanddle}>
               <Image image={ICON_FAVORITE.image} alternativeText={ICON_FAVORITE.alt} />
               add to favorites
             </Button>

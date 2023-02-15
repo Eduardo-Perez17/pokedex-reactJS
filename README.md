@@ -24,3 +24,12 @@ MIT
 ## Tareas
 
 - Terminar de poner Loaders
+- Que presione la imagen lo lleve a detalles
+- ver los re renders que causan peticiones al servidor sin necesidad
+- quitar los margin en la app
+- solucionar bug de que puedes poner el mismo pokemon en favoritos
+- dar estilos al boton de favorito para dar sensacion que hizo click
+- poner loaders ( cuando la da al boton de "share", al presionar el boton para buscar un pokemon )
+- poner boton de eliminar de favoritos
+- revisar una mejor manera para guardar en el estado las imagenes de MORE IMAGES de los detalles del pokemon
+- poner en el fondo una pokebola para rellenar en detalles

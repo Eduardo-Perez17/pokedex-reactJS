@@ -1,0 +1,29 @@
+._background {
+  background-color: #060b28;
+}
+
+.favorite-main {
+  color: #fff;
+}
+
+.favorite-main .favorite__img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.favorite-main .favorite__img img {
+  width: 180px;
+}
+
+.favorite-main .favorite__pokemon {
+  margin: 100px 0;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.favorite-main .favorite__pokemon .card__pokemon {
+  width: 300px;
+}

@@ -1,12 +1,11 @@
 .header__pokemon--type {
-  margin: 10px 0;
   display: flex;
+  gap: 20px;
   justify-content: flex-start;
   align-items: center;
 }
 
 .main_style_type {
-  margin-right: 10px;
   width: 100px;
   display: flex;
   justify-content: center;
