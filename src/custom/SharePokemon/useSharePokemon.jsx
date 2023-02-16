@@ -3,6 +3,7 @@ import { useState } from 'react';
 export const useSharePokemon = (pokemonData) => {
   const [notificationChecked, setNotificationChecked] = useState(false);
   const [notificationError, setNotificationError] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleShare = (e) => {
     e.preventDefault();
@@ -17,12 +18,14 @@ export const useSharePokemon = (pokemonData) => {
         .then(() => setNotificationChecked(true))
         .catch(() => setNotificationError(true));
     }
+    setLoading(true);
   };
 
   setTimeout(() => {
+    setLoading(false);
     setNotificationChecked(false);
     setNotificationError(false);
   }, 8000);
 
-  return [handleShare, notificationChecked, notificationError, notificationError];
+  return [handleShare, notificationChecked, notificationError, notificationError, loading];
 };

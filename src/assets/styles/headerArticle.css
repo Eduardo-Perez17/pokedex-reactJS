@@ -11,7 +11,15 @@
   font-weight: bold;
 }
 
+.header__article--pokemon a {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
 .button-info {
+  display: flex;
   gap: 10px;
 }
 
@@ -34,6 +42,7 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
+  margin-top: 20px;
   margin-bottom: 150px;
 }
 
@@ -65,9 +74,22 @@
   .header__article--pokemon {
     text-align: center;
   }
+
+  .header__article--pokemon a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
+  .header__article--pokemon a {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
   .header__article--pokemon {
     text-align: start;
   }

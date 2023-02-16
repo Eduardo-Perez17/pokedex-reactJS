@@ -14,6 +14,7 @@ import homeIcon from '../../assets/img/home.png';
 import heightIcon from '../../assets/img/pokemon/height.png';
 import weightIcon from '../../assets/img/pokemon/weight.png';
 import shareIcon from '../../assets/img/pokemon/share.png';
+import psyduckIcon from '../../assets/img/psyduck_icon.png';
 
 import leftIcon from '../../assets/img/left.png';
 import rigthIcon from '../../assets/img/right.png';
@@ -30,6 +31,7 @@ import burstIcon from '../../assets/img/explosion.png';
 import favoriteIcon from '../../assets/img/favorito.png';
 
 import favoriteImage from '../../assets/img/header_favorite.png';
+import favoriteListImage from '../../assets/img/favorito_list.png';
 
 export const ICON_CARD = {
   height: heightIcon,
@@ -91,6 +93,11 @@ export const ICON_SHARE = {
   alt: 'icon share',
 };
 
+export const ICON_PSYDUCK = {
+  image: psyduckIcon,
+  alt: 'icon psyduck',
+};
+
 export const ICON_CHECKED = {
   image: checkIcon,
   alt: 'icon check',
@@ -134,4 +141,9 @@ export const ICON_FAVORITE = {
 export const ICON_FAVORITE_IMG = {
   image: favoriteImage,
   alt: 'image pokemon',
+};
+
+export const ICON_FAVORITE_LIST = {
+  image: favoriteListImage,
+  alt: 'image favorite',
 };

@@ -169,7 +169,7 @@
   margin: auto;
 }
 
-.button-favorite {
+.main__other--page .button-favorite {
   text-transform: capitalize;
   display: flex;
   gap: 8px;
@@ -177,16 +177,24 @@
   align-items: center;
 }
 
-.button-favorite img {
+.main__other--page .button-favorite img {
   width: 20px;
 }
 
-.pokemon__detail--header-info h2 {
+.main__other--page .pokemon__detail--header-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+
+.main__other--page .pokemon__detail--header-info h2 {
   text-transform: capitalize;
+  margin: 0;
 }
 
 @media screen and (min-width: 768px) {
-  .pokemon__header--img-item {
+  .main__other--page .pokemon__header--img-item {
     display: block;
     margin: auto;
     width: 350px;
@@ -219,6 +227,14 @@
     display: grid;
     grid-gap: 30px;
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .main__other--page .button-favorite {
+    transition: 0.3s ease;
+  }
+
+  .main__other--page .button-favorite:hover {
+    background-color: #d54a40;
   }
 }
 

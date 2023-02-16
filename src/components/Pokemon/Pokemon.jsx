@@ -51,7 +51,11 @@ const Pokemon = ({ data, ability, error }) => {
           </motion.div>
           <PokemonTypeDecoration typeIcon={typePokemonImageStyles} />
           <motion.div variants={ITEM} className='pokemon__header--img'>
-            <PokemonImage pokeImage={data} />
+            <PokemonImage
+              pokeImage={data}
+              pokeImageStyle='pokemon__header--img-item'
+              newDataProvider={newDataProvider}
+            />
           </motion.div>
         </motion.div>
       )}

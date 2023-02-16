@@ -4,7 +4,6 @@ import { useSearchPokemonData } from '../../custom/SearchPokemonData/useSearchPo
 
 import '../../assets/styles/article.css';
 
-// import { ArticleSearchTypesPokemon } from '../ArticleSearchTypesPokemon';
 import { ContainerParagraph } from '../ContainerParagraph';
 import { ArticleSearchForm } from '../ArticleSearchForm';
 import { PokemonArticle } from '../PokemonArticle';
@@ -26,7 +25,6 @@ const Article = () => {
       <Block designBlock='article-main'>
         <Title size='lg'>Pokemon Search</Title>
         <Block designBlock='search__article'>
-          {/* <ArticleSearchTypesPokemon /> */}
           <Block designBlock='form__serch'>
             <ContainerParagraph designContainerParagraph='type__writer'>search for id or name</ContainerParagraph>
             <ArticleSearchForm

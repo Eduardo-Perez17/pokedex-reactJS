@@ -43,6 +43,7 @@
 
 .main-form {
   display: flex;
+  gap: 10px;
 }
 
 .input {
@@ -51,7 +52,6 @@
   color: #fff;
   padding: 5px;
   border-radius: 5px;
-  margin-right: 10px;
 }
 
 .search__btn {
@@ -138,13 +138,10 @@
   padding: 8px;
 }
 
-.btn-article-pagination:nth-child(1) {
-  margin-right: 20px;
-}
-
 .main__button--page {
   margin-top: 20px;
   display: flex;
+  gap: 20px;
   justify-content: center;
   align-items: center;
 }

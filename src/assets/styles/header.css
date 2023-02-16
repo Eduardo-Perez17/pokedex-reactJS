@@ -56,7 +56,8 @@
 
 .header__icon a:nth-child(1) {
   margin-right: 5px;
-  background-color: #fff;
+  color: #fff;
+  background-color: #c63f35;
   text-decoration: none;
   padding: 5px;
   border-radius: 4px;

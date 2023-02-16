@@ -12,8 +12,6 @@ import { PokemonName } from '../../PokemonName';
 import { Block } from '../../Block';
 import { Title } from '../../Title';
 
-// ! PONER LOADER
-
 const PokemonDetailArtilce = ({ pokemonData }) => {
   const [dataAbility, setDataAbility] = useState();
 
