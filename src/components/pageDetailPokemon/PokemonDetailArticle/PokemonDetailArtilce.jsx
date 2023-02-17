@@ -12,8 +12,6 @@ import { PokemonName } from '../../PokemonName';
 import { Block } from '../../Block';
 import { Title } from '../../Title';
 
-// ! PONER LOADER
-
 const PokemonDetailArtilce = ({ pokemonData }) => {
   const [dataAbility, setDataAbility] = useState();
 
@@ -55,7 +53,7 @@ const PokemonDetailArtilce = ({ pokemonData }) => {
           </Block>
 
           <Block designBlock='pokemon__detail--article-image'>
-            <Title size='md'>More Image</Title>
+            <Title size='md'>More Images</Title>
             <Block designBlock='pokemon__detail--article-image-main'>
               <PokemonDetailArticleImage pokemonData={pokemonData} />
             </Block>

@@ -24,7 +24,6 @@ export const PagePagination = ({ page, functionPage }) => {
           designImage='icon__button--left icon__button--page'
         />
       </Button>
-
       <Button typeButton='button' onClickEvent={handleNext} designButton='button btn-article-pagination'>
         <Image
           image={ICON_SLIDE.rigth}

@@ -20,18 +20,12 @@ import { PokemonId } from '../PokemonId';
 import { Button } from '../Button';
 import { Image } from '../Image';
 
-// ! CUANDO PRESIONE UN BOTON MANDAR LA INFORMACION DEL POKEMON, NO ANTES
-
 const Pokemon = ({ data, ability, error }) => {
   const [typePokemon] = useTypeIcon(data.types);
   const [typePokemonImageStyles, setTypePokemonImageStyles] = useState([]);
   const { dataProviderHandle } = useData();
 
-  // ! ====================
-  const newDataProvider = () => {
-    dataProviderHandle(data);
-  };
-  // ! ====================
+  const newDataProvider = () => dataProviderHandle(data);
 
   useEffect(() => {
     setTypePokemonImageStyles(typePokemon);
@@ -57,7 +51,11 @@ const Pokemon = ({ data, ability, error }) => {
           </motion.div>
           <PokemonTypeDecoration typeIcon={typePokemonImageStyles} />
           <motion.div variants={ITEM} className='pokemon__header--img'>
-            <PokemonImage pokeImage={data} />
+            <PokemonImage
+              pokeImage={data}
+              pokeImageStyle='pokemon__header--img-item'
+              newDataProvider={newDataProvider}
+            />
           </motion.div>
         </motion.div>
       )}

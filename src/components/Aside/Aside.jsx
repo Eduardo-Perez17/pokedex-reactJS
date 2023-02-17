@@ -28,7 +28,7 @@ const Aside = () => {
                 <PokemonType />
               </Block>
               <Block designBlock='aside__card--img'>
-                <PokemonImage pokeImage={dataPokemon} />
+                <PokemonImage pokeImage={dataPokemon} pokeImageStyle='pokemon__header--img-item' />
               </Block>
               <Details pokemonsRandom={pokemonsRandom} />
             </Block>

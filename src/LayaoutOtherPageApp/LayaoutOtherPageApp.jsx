@@ -19,7 +19,7 @@ const LayaoutOtherPageApp = () => {
 
   return (
     <Layaout designGrid={`${typeBackground}_background`}>
-      <Block designBlock='main__other--page'>
+      <Block designBlock='main__other--page details-container favorite-container'>
         <Header />
         <Outlet />
         <Footer />
