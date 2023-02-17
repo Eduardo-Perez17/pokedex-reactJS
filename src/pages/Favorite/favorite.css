@@ -1,8 +1,10 @@
 ._background {
   background-color: #060b28;
+  min-height: 100vh;
 }
 
 .favorite-main {
+  margin: 60px 0;
   color: #fff;
 }
 
@@ -19,11 +21,48 @@
 
 .favorite-main .favorite__pokemon {
   margin: 100px 0;
-  display: flex;
+  display: grid;
+  justify-content: center;
+  align-items: center;
   gap: 40px;
-  flex-wrap: wrap;
 }
 
 .favorite-main .favorite__pokemon .card__pokemon {
-  width: 300px;
+  width: 250px;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+  .favorite-main .favorite__pokemon {
+    margin: 100px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1550px) {
+  .favorite-main .favorite__pokemon {
+    margin: 100px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+}
+
+@media screen and (min-width: 1551px) and (max-width: 1700px) {
+  .favorite-main .favorite__pokemon {
+    margin: 100px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+  }
+}
+
+@media screen and (min-width: 1701px) and (max-width: 2000px) {
+  .favorite-main .favorite__pokemon {
+    margin: 100px 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px;
+  }
 }

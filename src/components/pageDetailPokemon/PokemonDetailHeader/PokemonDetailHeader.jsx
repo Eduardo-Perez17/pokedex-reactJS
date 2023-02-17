@@ -15,11 +15,18 @@ const PokemonDetailHeader = ({ pokemonData }) => {
   const [favoriteList, setFavoriteList] = useState(false);
   const [typePokemon] = useTypeIcon(pokemonData?.types);
   const [typePokemonImageStyles, setTypePokemonImageStyles] = useState([]);
-  const { dataFavoritePokemon } = useData();
+  const { dataFavoritePokemon, pokemonFavorite, setPokemonFavorite } = useData();
 
   const pokemonFavoriteHanddle = () => {
     setFavoriteList(!favoriteList);
-    dataFavoritePokemon(pokemonData);
+    if (!favoriteList) dataFavoritePokemon(pokemonData);
+    else {
+      const pokemonFilter = pokemonFavorite.filter((pokemonDelate) => {
+        const resultFilter = pokemonDelate.id !== pokemonData.id;
+        return resultFilter;
+      });
+      setPokemonFavorite(pokemonFilter);
+    }
   };
 
   useEffect(() => {
@@ -36,11 +43,16 @@ const PokemonDetailHeader = ({ pokemonData }) => {
             <PokemonType pokemonType={typePokemonImageStyles} />
             <Button designButton='button button-favorite' onClickEvent={pokemonFavoriteHanddle}>
               {!favoriteList ? (
-                <Image image={ICON_FAVORITE.image} alternativeText={favoriteList.alt} />
+                <>
+                  <Image image={ICON_FAVORITE.image} alternativeText={favoriteList.alt} />
+                  add to favorite
+                </>
               ) : (
-                <Image image={ICON_FAVORITE_LIST.image} alternativeText={favoriteList.alt} />
+                <>
+                  <Image image={ICON_FAVORITE_LIST.image} alternativeText={favoriteList.alt} />
+                  delete to favorite
+                </>
               )}
-              add to favorites
             </Button>
           </Block>
           <Block designBlock='pokemon__detail--header-img'>

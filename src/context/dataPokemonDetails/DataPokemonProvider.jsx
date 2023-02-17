@@ -8,12 +8,15 @@ const DataPokemonDetails = ({ children }) => {
   const allPokemonsFavorite = [...pokemonFavorite];
 
   const dataProviderHandle = (dataResolve) => setPokemonDataProvider(dataResolve);
+
   const dataFavoritePokemon = (dataFavorite) => {
     allPokemonsFavorite.push(dataFavorite);
     setPokemonFavorite(allPokemonsFavorite);
   };
 
-  const data = { pokemonDataProvider, dataProviderHandle, pokemonFavorite, dataFavoritePokemon };
+  const data = { pokemonDataProvider, dataProviderHandle, pokemonFavorite, dataFavoritePokemon, setPokemonFavorite };
+
+  localStorage.setItem('pokemon', JSON.stringify(pokemonFavorite));
   return <DataContext.Provider value={data}>{children}</DataContext.Provider>;
 };
 
