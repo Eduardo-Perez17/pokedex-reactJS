@@ -12,14 +12,16 @@ import { Block } from '../../Block';
 import { Image } from '../../Image';
 
 const PokemonDetailHeader = ({ pokemonData }) => {
-  const [favoriteList, setFavoriteList] = useState(false);
+  const [localStoragePokemon, setLocalStoragePokemon] = useState(JSON.parse(localStorage.getItem('pokemon')));
+
   const [typePokemon] = useTypeIcon(pokemonData?.types);
   const [typePokemonImageStyles, setTypePokemonImageStyles] = useState([]);
   const { dataFavoritePokemon, pokemonFavorite, setPokemonFavorite } = useData();
 
   const pokemonFavoriteHanddle = () => {
-    setFavoriteList(!favoriteList);
-    if (!favoriteList) dataFavoritePokemon(pokemonData);
+    setLocalStoragePokemon(!localStoragePokemon);
+
+    if (pokemonFavorite) dataFavoritePokemon(pokemonData);
     else {
       const pokemonFilter = pokemonFavorite.filter((pokemonDelate) => {
         const resultFilter = pokemonDelate.id !== pokemonData.id;
@@ -42,14 +44,14 @@ const PokemonDetailHeader = ({ pokemonData }) => {
             <PokemonName name={pokemonData.name} />
             <PokemonType pokemonType={typePokemonImageStyles} />
             <Button designButton='button button-favorite' onClickEvent={pokemonFavoriteHanddle}>
-              {!favoriteList ? (
+              {localStoragePokemon ? (
                 <>
-                  <Image image={ICON_FAVORITE.image} alternativeText={favoriteList.alt} />
+                  <Image image={ICON_FAVORITE.image} alternativeText={ICON_FAVORITE.alt} />
                   add to favorite
                 </>
               ) : (
                 <>
-                  <Image image={ICON_FAVORITE_LIST.image} alternativeText={favoriteList.alt} />
+                  <Image image={ICON_FAVORITE_LIST.image} alternativeText={ICON_FAVORITE_LIST.alt} />
                   delete to favorite
                 </>
               )}

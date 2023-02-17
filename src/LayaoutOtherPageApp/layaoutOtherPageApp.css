@@ -9,4 +9,5 @@
 }
 
 .main__other--page {
+  min-height: 100vh;
 }

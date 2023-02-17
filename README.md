@@ -25,4 +25,3 @@ MIT
 
 - ver los re renders que causan peticiones al servidor sin necesidad
 - revisar una mejor manera para guardar en el estado las imagenes de MORE IMAGES de los detalles del pokemon
-- poner en el fondo una pokebola para rellenar en detalles

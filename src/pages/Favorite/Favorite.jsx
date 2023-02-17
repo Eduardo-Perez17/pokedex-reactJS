@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useData } from '../../context/dataPokemonDetails/DataPokemonProvider';
 import { ICON_FAVORITE_IMG } from '../../utils/images';
 
@@ -12,10 +12,14 @@ import { Block } from '../../components/Block';
 import { Image } from '../../components/Image';
 
 const Favorite = () => {
+  // const [pokemonLocalStorage, setPokemonLocalStorage] = useState();
+  // const [localStorageJSON, setLocalStorageJSON] = useState();
   const { pokemonFavorite } = useData();
-  // const pokemonFavoriteLocalStorage = JSON.parse(localStorage.getItem('pokemon'));
-  // console.log(pokemonFavoriteLocalStorage);
 
+  // useEffect(() => {
+  //   setLocalStorageJSON(JSON.parse(localStorage.getItem('pokemon')));
+  //   setPokemonLocalStorage(localStorageJSON);
+  // }, [pokemonFavorite]);
   return (
     <Block designBlock='favorite-main'>
       <Block designBlock='favorite__img'>

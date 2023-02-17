@@ -193,6 +193,13 @@
   margin: 0;
 }
 
+.main__other--page {
+  background-image: url(../../../src/assets/img/pokeball2.svg);
+
+  background-repeat: no-repeat;
+  background-position: 2.5% 2.5%;
+}
+
 @media screen and (min-width: 768px) {
   .main__other--page .pokemon__header--img-item {
     display: block;
@@ -243,6 +250,13 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .main__other--page {
+    background-image: url(../../../src/assets/img/pokeball2.svg);
+
+    background-repeat: no-repeat;
+    background-position: 1% 1%;
+  }
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1500px) {
@@ -251,6 +265,13 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 60px;
   }
+
+  .main__other--page {
+    background-image: url(../../../src/assets/img/pokeball2.svg);
+
+    background-repeat: no-repeat;
+    background-position: 3.5% 3.5%;
+  }
 }
 
 @media screen and (min-width: 1501px) and (max-width: 2560px) {
@@ -258,5 +279,12 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 60px;
+  }
+
+  .main__other--page {
+    background-image: url(../../../src/assets/img/pokeball2.svg);
+
+    background-repeat: no-repeat;
+    background-position: 5.5% 5.5%;
   }
 }

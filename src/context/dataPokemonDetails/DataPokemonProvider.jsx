@@ -15,8 +15,8 @@ const DataPokemonDetails = ({ children }) => {
   };
 
   const data = { pokemonDataProvider, dataProviderHandle, pokemonFavorite, dataFavoritePokemon, setPokemonFavorite };
-
   localStorage.setItem('pokemon', JSON.stringify(pokemonFavorite));
+
   return <DataContext.Provider value={data}>{children}</DataContext.Provider>;
 };
 
