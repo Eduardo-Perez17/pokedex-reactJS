@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useData } from '../../context/dataPokemonDetails/DataPokemonProvider';
+// import { useData } from '../../context/dataPokemonDetails/DataPokemonProvider';
 import { ICON_FAVORITE_IMG } from '../../utils/images';
 
 import './favorite.css';
@@ -12,23 +12,23 @@ import { Block } from '../../components/Block';
 import { Image } from '../../components/Image';
 
 const Favorite = () => {
-  // const [pokemonLocalStorage, setPokemonLocalStorage] = useState();
-  // const [localStorageJSON, setLocalStorageJSON] = useState();
-  const { pokemonFavorite } = useData();
+  const [pokemonLocalStorage, setPokemonLocalStorage] = useState();
+  // const { pokemonFavorite } = useData();
 
-  // useEffect(() => {
-  //   setLocalStorageJSON(JSON.parse(localStorage.getItem('pokemon')));
-  //   setPokemonLocalStorage(localStorageJSON);
-  // }, [pokemonFavorite]);
+  useEffect(() => {
+    const pokemonsStorage = JSON.parse(localStorage.getItem('pokemon'));
+    setPokemonLocalStorage(pokemonsStorage);
+  }, []);
+
   return (
     <Block designBlock='favorite-main'>
       <Block designBlock='favorite__img'>
         <Image image={ICON_FAVORITE_IMG.image} alternativeText={ICON_FAVORITE_IMG.alt} />
         <ContainerParagraph>Guarda tus pokemones favoritos, visitalos en cualquier momento.</ContainerParagraph>
       </Block>
-      {pokemonFavorite && (
+      {pokemonLocalStorage && (
         <Block designBlock='favorite__pokemon'>
-          {pokemonFavorite.map((pokemon) => (
+          {pokemonLocalStorage.map((pokemon) => (
             <React.Fragment key={pokemon.id}>
               <PokemonArticle pokemonData={pokemon} />
             </React.Fragment>
